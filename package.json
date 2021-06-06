@@ -3,10 +3,10 @@
   "workspaces": {
     "packages": [
       "carbon"
-    ],
-    "nohoist": [
-      "**"
     ]
   },
-	"license": "MIT"
+	"scripts": {
+		"start:carbon": "yarn workspace carbon start"
+	},
+  "license": "MIT"
 }

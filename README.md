@@ -14,7 +14,14 @@
 
 ### ✨ [Demo](https://trashable.vercel.app/)
 
-## Install
+## Structure
+
+| Codebase             | Description  |
+| :------------------- | :----------: |
+| [carbon](carbon)     | Express API  |
+| [nitrogen](nitrogen) | Flutter App  |
+| [oxygen](oxygen)     | Vue frontend |
+| [hydrogen](hydrogen) |  API Client  |
 
 ```sh
 docker-compose up
@@ -24,7 +31,7 @@ docker-compose up
 
 👤 **Andrei Ionica,Silviu Deonise,Furdui Dragos,Dani Mircu**
 
-* Github: [@AndreiIonica](https://github.com/AndreiIonica)
+- Github: [@AndreiIonica](https://github.com/AndreiIonica)
 
 ## 🤝 Contributing
 
@@ -39,5 +46,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2021 [Andrei Ionica,Silviu Deonise,Furdui Dragos,Dani Mircu](https://github.com/AndreiIonica).<br />
 This project is [MIT](LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

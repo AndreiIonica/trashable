@@ -6,8 +6,9 @@
       "oxygen"
     ]
   },
-	"scripts": {
-		"start:carbon": "yarn workspace carbon start"
-	},
+  "scripts": {
+    "setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+    "start:carbon": "yarn workspace carbon start"
+  },
   "license": "MIT"
 }

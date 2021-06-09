@@ -8,7 +8,7 @@
     "seed": "knex seed:run",
     "clean": "node data_seed/clean_judete.js && node data_seed/clean_orase.js",
     "start": "node src/index.js",
-    "test": "jest",
+    "test": "mocha tests/**/*.js",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
@@ -27,7 +27,9 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.18",
     "@types/jest": "^26.0.9",
+    "chai": "^4.3.4",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-node": "^4.1.0",
@@ -36,6 +38,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.6.3",
+    "mocha": "^9.0.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "supertest": "^4.0.2"

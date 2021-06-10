@@ -1,4 +1,5 @@
 const supertest = require('supertest');
+const { expect } = require('chai');
 const db = require('../src/db');
 
 const app = require('../src/app');
@@ -9,7 +10,7 @@ describe('GET all cities', () => {
       .get('/api/0.1/city/')
       .expect('Content-Type', /json/)
       .expect(200);
-    expect(response.body).toHaveProperty('length');
+    expect(response.body).to.have.property('length');
   });
 });
 
@@ -19,10 +20,10 @@ describe('GET one city', () => {
       .get('/api/0.1/city/1')
       .expect('Content-Type', /json/)
       .expect(200);
-    expect(response.body).toHaveProperty('id');
-    expect(response.body).toHaveProperty('name');
-    expect(response.body).toHaveProperty('county_id');
-    expect(response.body).toHaveProperty('updated_at');
-    expect(response.body).toHaveProperty('created_at');
+    expect(response.body).to.have.property('id');
+    expect(response.body).to.have.property('name');
+    expect(response.body).to.have.property('county_id');
+    expect(response.body).to.have.property('updated_at');
+    expect(response.body).to.have.property('created_at');
   });
 });

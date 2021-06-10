@@ -1,6 +1,7 @@
 // Tests for the app
 
 const supertest = require('supertest');
+const { expect } = require('chai');
 const db = require('../src/db');
 
 const app = require('../src/app');
@@ -12,7 +13,7 @@ describe('GET /', () => {
       .expect('Content-Type', /json/)
       .expect(200);
 
-    expect(response.body.message).toEqual('Trashable Backend!');
+    expect(response.body.message).to.equal('Trashable Backend!');
   });
 });
 
@@ -22,6 +23,6 @@ describe('GET /api/0.1/', () => {
       .get('/api/0.1/')
       .expect('Content-Type', /json/)
       .expect(200);
-    expect(response.body.message).toEqual('API');
+    expect(response.body.message).to.equal('API');
   });
 });

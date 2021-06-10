@@ -16,12 +16,12 @@
 
 ## Structure
 
-| Codebase             | Description  |
-| :------------------- | :----------: |
-| [carbon](carbon)     | Express API  |
-| [nitrogen](nitrogen) | Flutter App  |
-| [oxygen](oxygen)     | Vue frontend |
-| [hydrogen](hydrogen) |  API Client  |
+| Codebase             |  Description  |
+| :------------------- | :-----------: |
+| [carbon](carbon)     |  Express API  |
+| [nitrogen](nitrogen) |  Flutter App  |
+| [oxygen](oxygen)     | Vue frontend  |
+| [hydrogen](hydrogen) | JS API Client |
 
 ```sh
 docker-compose up

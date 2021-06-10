@@ -7,7 +7,6 @@
     ]
   },
   "scripts": {
-    "workspace:cz": "bash setup_cz.sh",
     "setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
     "start:carbon": "yarn workspace carbon start",
     "cz": "cz"

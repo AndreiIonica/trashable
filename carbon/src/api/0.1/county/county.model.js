@@ -2,16 +2,16 @@
 const { Model } = require('objection');
 
 const schema = require('./county.schema.json');
-const tableNames = require('../../../constants/tableNames');
+const tableNames = require('../../../constants/tableNames.json');
 
 class County extends Model {
-  static get tableName() {
-    return tableNames.county;
-  }
+	static get tableName() {
+		return tableNames.county;
+	}
 
-  static get jsonSchema() {
-    return schema;
-  }
+	static get jsonSchema() {
+		return schema;
+	}
 }
 
 module.exports = County;

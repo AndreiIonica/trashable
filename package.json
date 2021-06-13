@@ -1,9 +1,11 @@
 {
+	"name": "trashable",
 	"private": true,
 	"workspaces": {
 		"packages": [
-			"@trashable/carbon",
-			"oxygen"
+			"carbon",
+			"oxygen",
+			"hydrogen"
 		]
 	},
 	"scripts": {

@@ -6,12 +6,16 @@
 			"carbon",
 			"oxygen",
 			"hydrogen"
+		],
+		"nohoist": [
+			"**/@vue/cli-plugin-eslint",
+			"**/@vue/cli-plugin-eslint/**"
 		]
 	},
 	"scripts": {
 		"setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
-		"start:carbon": "yarn workspace carbon start",
-		"build:oxygen": "yarn workspace oxygen build",
+		"start:carbon": "yarn workspace @trashable/carbon start",
+		"build:oxygen": "yarn workspace @trashable/oxygen build",
 		"cz": "cz"
 	},
 	"license": "MIT",

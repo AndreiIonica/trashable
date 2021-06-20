@@ -1,15 +1,17 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-base"
-  ],
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "no-unused-vars": "warn",
-    "linebreak-style": "off",
-    "no-plusplus": "off",
-    "import/no-unresolved": "off",
-    "import/extensions": "off"
-  }
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"airbnb-base"
+	],
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"no-unused-vars": "warn",
+		"linebreak-style": "off",
+		"no-plusplus": "off",
+		"import/no-unresolved": "off",
+		"import/extensions": "off",
+		"no-tabs": 0,
+		"indent": ["error", "tab"]
+	}
 }

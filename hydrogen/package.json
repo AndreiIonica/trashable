@@ -4,7 +4,6 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "tsc",
-		"start": "node build/index.js",
 		"run": "tsc && node build/index.js",
 		"dev:watch": "tsc --watch & nodemon build"
 	},

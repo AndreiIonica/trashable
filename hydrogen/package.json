@@ -7,7 +7,9 @@
 		"run": "tsc && node build/index.js",
 		"dev:watch": "tsc --watch & nodemon build"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"isomorphic-unfetch": "^3.1.0"
+	},
 	"devDependencies": {
 		"@types/node": "^15.12.2",
 		"@typescript-eslint/eslint-plugin": "^4.26.1",

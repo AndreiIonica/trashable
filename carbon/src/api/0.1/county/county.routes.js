@@ -13,10 +13,9 @@ const router = express.Router();
 router.get('/', async (req, res, next) => {
 	try {
 		// auto-filter
-		const queryParams = req.query;
 		const counties = await County.query()
 			.select('id', 'name', 'code', 'created_at', 'updated_at')
-			.where(queryParams)
+			.where('deleted_at', null)
 			.where('deleted_at', null);
 
 		// Send back the object

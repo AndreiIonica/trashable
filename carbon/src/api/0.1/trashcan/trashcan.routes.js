@@ -7,10 +7,7 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
 	try {
-		const queryParams = req.query;
-		const trashcans = await Trashcan.query()
-			.where(queryParams)
-			.where('deleted_at', null);
+		const trashcans = await Trashcan.query().where('deleted_at', null);
 
 		res.json(trashcans);
 	} catch (err) {

@@ -22,9 +22,9 @@ router.use('/auth', auth);
 
 // Generic response for /api
 router.get('/', (req, res) => {
-  res.json({
-    message: 'API'
-  });
+	res.json({
+		message: 'API'
+	});
 });
 
 // export the  router so it can be mounted in index.js

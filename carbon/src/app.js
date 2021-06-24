@@ -27,9 +27,9 @@ app.use(express.json());
 
 // generic response for the '/' route
 app.get('/', (req, res) => {
-  res.json({
-    message: 'Trashable Backend!'
-  });
+	res.json({
+		message: 'Trashable Backend!'
+	});
 });
 
 // mount the api router

@@ -4,15 +4,15 @@ const User = require('./user.model');
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-  try {
-    const fields = ['name', 'role', 'last_login', 'id'];
+	try {
+		const fields = ['name', 'role', 'last_login', 'id'];
 
-    const users = await User.query().select(fields).where('deleted_at', null);
+		const users = await User.query().select(fields).where('deleted_at', null);
 
-    res.json(users);
-  } catch (e) {
-    next(e);
-  }
+		res.json(users);
+	} catch (e) {
+		next(e);
+	}
 });
 
 module.exports = router;

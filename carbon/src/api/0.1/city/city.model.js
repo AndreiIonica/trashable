@@ -5,30 +5,30 @@ const { Model } = require('objection');
 const County = require('../county/county.model');
 
 const schema = require('./city.schema.json');
-const tableNames = require('../../../constants/tableNames');
+const tableNames = require('../../../constants/tableNames.json');
 
 class City extends Model {
-  static get tableName() {
-    return tableNames.city;
-  }
+	static get tableName() {
+		return tableNames.city;
+	}
 
-  static get jsonSchema() {
-    return schema;
-  }
+	static get jsonSchema() {
+		return schema;
+	}
 
-  static get relationMappings() {
-    return {
-      county: {
-        // Relation: ONE counnty has MANY cities
-        relation: Model.BelongsToOneRelation,
-        modelClass: County,
-        join: {
-          from: 'county.id',
-          to: 'city.county_id'
-        }
-      }
-    };
-  }
+	static get relationMappings() {
+		return {
+			county: {
+				// Relation: ONE counnty has MANY cities
+				relation: Model.BelongsToOneRelation,
+				modelClass: County,
+				join: {
+					from: 'county.id',
+					to: 'city.county_id'
+				}
+			}
+		};
+	}
 }
 
 module.exports = City;

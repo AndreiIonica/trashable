@@ -1,28 +1,34 @@
 {
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "carbon",
-      "oxygen"
-    ]
-  },
-  "scripts": {
-    "setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
-    "start:carbon": "yarn workspace carbon start",
-    "build:oxygen": "yarn workspace oxygen build",
-    "cz": "cz"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "commitizen": "^4.2.4",
-    "cz-customizable": "^6.3.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable",
-      "defaultScope": "global"
-    }
-  }
+	"name": "trashable",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"carbon",
+			"oxygen",
+			"hydrogen"
+		],
+		"nohoist": [
+			"**/@vue/cli-plugin-eslint",
+			"**/@vue/cli-plugin-eslint/**"
+		]
+	},
+	"scripts": {
+		"setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+		"start:carbon": "yarn workspace @trashable/carbon start",
+		"build:oxygen": "yarn workspace @trashable/oxygen build",
+		"cz": "cz"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@commitlint/cli": "^12.1.4",
+		"@commitlint/config-conventional": "^12.1.4",
+		"commitizen": "^4.2.4",
+		"cz-customizable": "^6.3.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-customizable",
+			"defaultScope": "global"
+		}
+	}
 }

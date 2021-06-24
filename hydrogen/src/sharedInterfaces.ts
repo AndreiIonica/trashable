@@ -3,4 +3,5 @@ export interface SuccesResponse {
 	message: string;
 	stack?: string;
 	succes?: boolean;
+	errors?: string[];
 }

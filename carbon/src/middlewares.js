@@ -15,10 +15,15 @@ function errorHandler(err, req, res, next) {
 	const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
 	res.status(statusCode);
 
+	let { message } = err;
+	if (err.message.includes('duplicate key value violates unique constraint')) {
+		message = 'The entityy that you are trying to create already exists';
+	}
+
 	// We want to show the stack only in development
 	res.json({
 		status: res.statusCode,
-		message: err.message,
+		message,
 		stack: process.env.NODE_ENV === 'production' ? 'nope' : err.stack,
 		errors: err.errors || undefined
 	});

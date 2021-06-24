@@ -30,7 +30,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', isLoggedIn, async (req, res, next) => {
 	try {
 		req.body.user_id = req.auth_data.id;
-		const trashcan = await Trashcan.query().insert(req.body);
+		const trashcan = await Trashcan.query().insert(req.body).returning('*');
 
 		res.json(trashcan);
 	} catch (err) {

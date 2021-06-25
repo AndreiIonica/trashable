@@ -12,8 +12,8 @@ const types = require('../sources/type.json');
 
 const citySeed = async (knex) => {
 	const cities = [];
-	// Get the id of Arges county
-	const { id } = await knex(tableNames.county)
+	// Get the id of Arges region
+	const { id } = await knex(tableNames.region)
 		.select('id')
 		.where('code', 'AG')
 		.first();
@@ -25,7 +25,7 @@ const citySeed = async (knex) => {
 		oraseJSON.map(async (oras) => {
 			cities.push({
 				name: oras.name,
-				county_id: id
+				region_id: id
 			});
 		})
 	);
@@ -57,7 +57,7 @@ exports.seed = async (knex) => {
 	await Promise.all(Object.keys(tableNames).map((name) => knex(name).del()));
 
 	// COUNTIES SEED
-	await knex(tableNames.county).insert(judete);
+	await knex(tableNames.region).insert(judete);
 
 	// CITIES SEED
 	await citySeed(knex);

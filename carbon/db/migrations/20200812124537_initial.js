@@ -26,7 +26,7 @@ exports.up = async (knex) => {
 		addDefaults(table);
 	});
 
-	await knex.schema.createTable(tableNames.county, (table) => {
+	await knex.schema.createTable(tableNames.region, (table) => {
 		table.increments().notNullable();
 		table.string('name').notNullable();
 		table.string('code', 5).notNullable();
@@ -37,7 +37,7 @@ exports.up = async (knex) => {
 	await knex.schema.createTable(tableNames.city, (table) => {
 		table.increments().notNullable();
 		table.string('name', 50).notNullable();
-		reference(table, 'county_id', tableNames.county);
+		reference(table, 'region_id', tableNames.region);
 
 		addDefaults(table);
 	});
@@ -51,5 +51,5 @@ exports.down = async (knex) => {
 	// Reverse from creation order
 	await knex.schema.dropTableIfExists(tableNames.city);
 	await knex.schema.dropTableIfExists(tableNames.trashcan_type);
-	await knex.schema.dropTableIfExists(tableNames.county);
+	await knex.schema.dropTableIfExists(tableNames.region);
 };

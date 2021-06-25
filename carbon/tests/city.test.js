@@ -22,7 +22,7 @@ describe('GET one city', () => {
 			.expect(200);
 		expect(response.body).to.have.property('id');
 		expect(response.body).to.have.property('name');
-		expect(response.body).to.have.property('county_id');
+		expect(response.body).to.have.property('region_id');
 		expect(response.body).to.have.property('updated_at');
 		expect(response.body).to.have.property('created_at');
 	});

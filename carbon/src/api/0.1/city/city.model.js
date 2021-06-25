@@ -2,7 +2,7 @@
 const { Model } = require('objection');
 
 // For relation mapping
-const County = require('../county/county.model');
+const Region = require('../region/region.model');
 
 const schema = require('./city.schema.json');
 const tableNames = require('../../../constants/tableNames.json');
@@ -18,13 +18,13 @@ class City extends Model {
 
 	static get relationMappings() {
 		return {
-			county: {
+			region: {
 				// Relation: ONE counnty has MANY cities
 				relation: Model.BelongsToOneRelation,
-				modelClass: County,
+				modelClass: Region,
 				join: {
-					from: 'county.id',
-					to: 'city.county_id'
+					from: 'region.id',
+					to: 'city.region_id'
 				}
 			}
 		};

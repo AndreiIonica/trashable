@@ -3,7 +3,7 @@ const express = require('express');
 
 // Get routes
 const trashcanType = require('./trashcanType/trashcanType.routes');
-const county = require('./county/county.routes');
+const region = require('./region/region.routes');
 const city = require('./city/city.routes');
 const trashcan = require('./trashcan/trashcan.routes');
 const user = require('./user/user.routes');
@@ -14,7 +14,7 @@ const router = express.Router();
 
 // Mount the routes
 router.use('/trashcanType', trashcanType);
-router.use('/county', county);
+router.use('/region', region);
 router.use('/city', city);
 router.use('/trashcan', trashcan);
 router.use('/user', user);

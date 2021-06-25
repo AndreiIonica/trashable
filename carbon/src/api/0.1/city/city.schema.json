@@ -4,7 +4,7 @@
 	"title": "City Type",
 	"description": "The city object schema",
 	"default": {},
-	"required": ["name", "county_id"],
+	"required": ["name", "region_id"],
 	"properties": {
 		"id": {
 			"$id": "#/properties/id",
@@ -17,10 +17,10 @@
 			"title": "The name of the city.Must be unique",
 			"examples": ["Arges"]
 		},
-		"county_id": {
+		"region_id": {
 			"$id": "#/properties/name",
 			"type": "string",
-			"title": "The id of the county",
+			"title": "The id of the region",
 			"examples": ["Arges"]
 		},
 		"created_at": {

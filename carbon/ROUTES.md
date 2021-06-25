@@ -2,7 +2,7 @@
 
 - [Home routes](#####home-routes)
   - [Trashcan type routes](#####trashcan-type)
-  - [County(judet) routes](<#####county(judet)>)
+  - [Region(judet) routes](<#####region(judet)>)
   - [City routes](#####city)
   - [Trashcan routes](#####trashcan)
 
@@ -32,12 +32,12 @@
   - empty body
   - deletes the trashcan_type with the given id
 
-##### COUNTY(JUDET)
+##### REGION(JUDET)
 
-- GET /api/0.1/county/
+- GET /api/0.1/region/
   - responds with all the counties in the system
-- GET /api/0.1/county/:id
-  - responds with the county with the given id
+- GET /api/0.1/region/:id
+  - responds with the region with the given id
 
 ##### CITY
 

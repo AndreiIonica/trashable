@@ -8,7 +8,7 @@ const app = require('../src/app');
 describe('GET all counties', () => {
 	it('should get all counties', async () => {
 		const response = await supertest(app)
-			.get('/api/0.1/county/')
+			.get('/api/0.1/region/')
 			.expect('Content-Type', /json/)
 			.expect(200);
 
@@ -16,9 +16,9 @@ describe('GET all counties', () => {
 	});
 });
 describe('GET one countie', () => {
-	it('should  get one county', async () => {
+	it('should  get one region', async () => {
 		const response = await supertest(app)
-			.get('/api/0.1/county/1')
+			.get('/api/0.1/region/1')
 			.expect('Content-Type', /json/)
 			.expect(200);
 		// un oras trb sa aiba proprietatile astea

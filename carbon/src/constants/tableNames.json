@@ -2,6 +2,6 @@
 	"trashcan": "trashcan",
 	"user": "user",
 	"city": "city",
-	"county": "county",
+	"region": "region",
 	"trashcan_type": "trashcan_type"
 }

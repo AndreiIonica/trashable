@@ -1,5 +1,5 @@
 // Here the use of an ORM makes things easier.
-// This object has a many to one relationship to the county id
+// This object has a many to one relationship to the region id
 const express = require('express');
 
 const router = express.Router();
@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
 	try {
 		const city = await City.query()
-			.select('id', 'name', 'county_id', 'updated_at', 'created_at')
+			.select('id', 'name', 'region_id', 'updated_at', 'created_at')
 			.where('deleted_at', null)
 			.findById(req.params.id);
 

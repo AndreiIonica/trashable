@@ -28,7 +28,7 @@ Backend for Trashable app.Made by Andrei and Dragos.[Link to DB Model](https://a
 │   │       │   ├── city.model.js (Holds the Objection(ORM) model)
 │   │       │   ├── city.route.js (Express route for /api/city/ routes)
 │   │       │   └── city.schema.json (JSON schema for validation)
-│   │       ├── county
+│   │       ├── region
 │   │       │   ├   same structure
 │   │       ├── trashcan
 │   │       │   ├   same structure

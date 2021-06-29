@@ -7,7 +7,7 @@ const app = require('../src/app');
 describe('GET all trashcan types', () => {
 	it('should respond with an array', async () => {
 		const response = await supertest(app)
-			.get('/api/0.1/trashcanType/')
+			.get('/api/v1/trashcanType/')
 			.expect('Content-Type', /json/)
 			.expect(200);
 		// Test if array

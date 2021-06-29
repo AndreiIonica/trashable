@@ -39,13 +39,13 @@ export interface NewTrashcan {
 }
 
 export async function GetAll(baseUrl = 'https://trashable-server.herokuapp.com'): Promise<Trashcan[]> {
-	const raw = await fetch(`${baseUrl}/api/0.1/trashcan`);
+	const raw = await fetch(`${baseUrl}/api/v1/trashcan`);
 	const trashcans = (await raw.json()) as Trashcan[];
 	return trashcans;
 }
 
 export async function GetOne(id: number, baseUrl = 'https://trashable-server.herokuapp.com'): Promise<Trashcan> {
-	const raw = await fetch(`${baseUrl}/api/0.1/trashcan/${id}`);
+	const raw = await fetch(`${baseUrl}/api/v1/trashcan/${id}`);
 	const trashcan = (await raw.json()) as Trashcan;
 	return trashcan;
 }
@@ -55,7 +55,7 @@ export async function CreateOne(
 	token: string,
 	baseUrl = 'https://trashable-server.herokuapp.com',
 ): Promise<Trashcan> {
-	const raw = await fetch(`${baseUrl}/api/0.1/trashcan`, {
+	const raw = await fetch(`${baseUrl}/api/v1/trashcan`, {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
@@ -76,7 +76,7 @@ export async function UpdateOne(
 	token: string,
 	baseUrl = 'https://trashable-server.herokuapp.com',
 ): Promise<SuccesResponse> {
-	const raw = await fetch(`${baseUrl}/api/0.1/trashcan/${id}`, {
+	const raw = await fetch(`${baseUrl}/api/v1/trashcan/${id}`, {
 		method: 'PUT',
 		headers: {
 			Accept: 'application/json',
@@ -98,7 +98,7 @@ export async function DeleteOne(
 	token: string,
 	baseUrl = 'https://trashable-server.herokuapp.com',
 ): Promise<SuccesResponse> {
-	const raw = await fetch(`${baseUrl}/api/0.1/trashcan/${id}`, {
+	const raw = await fetch(`${baseUrl}/api/v1/trashcan/${id}`, {
 		method: 'DELETE',
 		headers: {
 			Accept: 'application/json',

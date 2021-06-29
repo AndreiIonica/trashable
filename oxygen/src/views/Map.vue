@@ -1,8 +1,8 @@
 <template>
-  <div id="map-container">
-    <div id="map"></div>
-    <BottomBar @focus="focusMap" @closest="findClosest" @logout="logout" />
-  </div>
+	<div id="map-container">
+		<div id="map"></div>
+		<BottomBar @focus="focusMap" @closest="findClosest" @logout="logout" />
+	</div>
 </template>
 
 <script>
@@ -16,123 +16,124 @@ import { toateCosurile } from '../lib/DataManager';
 // vue doesnt know about it and throws a fit
 /* eslint-disable no-undef */
 export default {
-  data() {
-    return {
-      locationData: -1,
-      mapObj: {},
-      trashcans: [],
-      markers: [],
-      polyline: -1,
-    };
-  },
-  async mounted() {
-    try {
-      this.trashcans = await toateCosurile();
-    } catch (error) {
-      console.log(error);
-    }
+	data() {
+		return {
+			locationData: -1,
+			mapObj: {},
+			trashcans: [],
+			markers: [],
 
-    this.mapObj = createMap();
+			polyline: -1,
+		};
+	},
+	async mounted() {
+		try {
+			this.trashcans = await toateCosurile();
+		} catch (error) {
+			console.log(error);
+		}
 
-    const vm = this;
-    function locationSucces(pos) {
-      const lat = pos.coords.latitude;
-      const lon = pos.coords.longitude;
+		this.mapObj = createMap();
 
-      L.marker([lat, lon], {
-        icon: currentLocIcon,
-      }).addTo(vm.mapObj);
+		const vm = this;
+		function locationSucces(pos) {
+			const lat = pos.coords.latitude;
+			const lon = pos.coords.longitude;
 
-      vm.mapObj.setView([lat, lon], 20);
+			L.marker([lat, lon], {
+				icon: currentLocIcon,
+			}).addTo(vm.mapObj);
 
-      vm.locationData = [lat, lon];
-    }
+			vm.mapObj.setView([lat, lon], 20);
 
-    navigator.geolocation.getCurrentPosition(locationSucces);
+			vm.locationData = [lat, lon];
+		}
 
-    this.trashcans.forEach((tr) => {
-      let { latitude, longitude } = tr;
-      latitude = parseFloat(latitude);
-      longitude = parseFloat(longitude);
+		navigator.geolocation.getCurrentPosition(locationSucces);
 
-      const marker = L.marker([latitude, longitude], {
-        icon: trashcanIcon,
-      });
+		this.trashcans.forEach((tr) => {
+			let { latitude, longitude } = tr;
+			latitude = parseFloat(latitude);
+			longitude = parseFloat(longitude);
 
-      marker.addTo(this.mapObj);
+			const marker = L.marker([latitude, longitude], {
+				icon: trashcanIcon,
+			});
 
-      vm.markers.push(marker);
-    });
-  },
-  methods: {
-    focusMap() {
-      if (this.locationData === -1) return;
+			marker.addTo(this.mapObj);
 
-      this.mapObj.setView(this.locationData, 30);
-    },
-    findClosest() {
-      if (this.locationData === -1) return;
+			vm.markers.push(marker);
+		});
+	},
+	methods: {
+		focusMap() {
+			if (this.locationData === -1) return;
 
-      if (this.polyline !== -1) {
-        this.polyline.remove(map);
-      }
+			this.mapObj.setView(this.locationData, 30);
+		},
+		findClosest() {
+			if (this.locationData === -1) return;
 
-      const latInitial = this.locationData[0];
-      const lonInitial = this.locationData[1];
+			if (this.polyline !== -1) {
+				this.polyline.remove(map);
+			}
 
-      // A bit hacky, might refactor
-      // REFACTOR
-      const closestTrashcan = {
-        index: -1,
-        d: 99999999,
-      };
+			const latInitial = this.locationData[0];
+			const lonInitial = this.locationData[1];
 
-      this.trashcans.forEach((tr, i) => {
-        const lat = parseFloat(tr.latitude);
-        const lon = parseFloat(tr.longitude);
-        const dist = distance(lat, lon, latInitial, lonInitial);
-        if (closestTrashcan.d > dist) {
-          closestTrashcan.d = dist;
-          closestTrashcan.index = i;
-          closestTrashcan.latitude = lat;
-          closestTrashcan.longitude = lon;
-        }
-      });
+			// A bit hacky, might refactor
+			// REFACTOR
+			const closestTrashcan = {
+				index: -1,
+				d: 99999999,
+			};
 
-      this.addLine(latInitial, lonInitial, closestTrashcan.latitude, closestTrashcan.longitude);
-    },
+			this.trashcans.forEach((tr, i) => {
+				const lat = parseFloat(tr.latitude);
+				const lon = parseFloat(tr.longitude);
+				const dist = distance(lat, lon, latInitial, lonInitial);
+				if (closestTrashcan.d > dist) {
+					closestTrashcan.d = dist;
+					closestTrashcan.index = i;
+					closestTrashcan.latitude = lat;
+					closestTrashcan.longitude = lon;
+				}
+			});
 
-    addLine(lat1, lon1, lat2, lon2) {
-      const latlngs = [
-        [lat1, lon1],
-        [lat2, lon2],
-      ];
-      const map = this.mapObj;
-      const polyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
-      this.polyline = polyline;
-      // zoom the map to the polyline
-      map.fitBounds(polyline.getBounds());
-    },
-    logout() {
-      this.$token = null;
-      this.$router.push('/');
-    },
-  },
-  components: { BottomBar },
+			this.addLine(latInitial, lonInitial, closestTrashcan.latitude, closestTrashcan.longitude);
+		},
+
+		addLine(lat1, lon1, lat2, lon2) {
+			const latlngs = [
+				[lat1, lon1],
+				[lat2, lon2],
+			];
+			const map = this.mapObj;
+			const polyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
+			this.polyline = polyline;
+			// zoom the map to the polyline
+			map.fitBounds(polyline.getBounds());
+		},
+		logout() {
+			this.$token = null;
+			this.$router.push('/');
+		},
+	},
+	components: { BottomBar },
 };
 </script>
 
 <style scoped>
 #map-container {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 92% 8%;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 92% 8%;
 }
 #map {
-  background: rgb(136, 136, 136);
-  width: 100%;
-  /* height: 92vh; */
-  margin: 0;
+	background: rgb(136, 136, 136);
+	width: 100%;
+	/* height: 92vh; */
+	margin: 0;
 }
 </style>

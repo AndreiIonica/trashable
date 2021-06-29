@@ -13,7 +13,7 @@ const db = require('./db');
 const middlewares = require('./middlewares');
 
 // api router
-const api = require('./api/0.1/router');
+const api = require('./api/v1/router');
 
 // invoke the express app
 const app = express();
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 // mount the api router
-app.use('/api/0.1/', api);
+app.use('/api/v1/', api);
 
 // these need to be the last middlewares(a router is a middleware)
 // as something should hit these middlewares if it is a error or notFound

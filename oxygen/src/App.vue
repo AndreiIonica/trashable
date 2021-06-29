@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <transition name="fade" mode="out-in">
-      <router-view />
-    </transition>
-  </div>
+	<div id="app">
+		<transition name="fade" mode="out-in">
+			<router-view />
+		</transition>
+	</div>
 </template>
 
 <script>
@@ -13,25 +13,25 @@ export default {};
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.1s;
-  transition-property: opacity;
-  transition-timing-function: ease;
+	transition-duration: 0.1s;
+	transition-property: opacity;
+	transition-timing-function: ease;
 }
 
 .fade-enter,
 .fade-leave-active {
-  opacity: 0;
+	opacity: 0;
 }
 body {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 html,
 body {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 #app {
-  height: 100%;
+	height: 100%;
 }
 </style>

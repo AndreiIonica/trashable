@@ -23,7 +23,7 @@ Backend for Trashable app.Made by Andrei and Dragos.[Link to DB Model](https://a
 ├── ROUTES.md
 ├── src
 │   ├── api
-│   │   └── 0.1
+│   │   └── v1
 │   │       ├── city
 │   │       │   ├── city.model.js (Holds the Objection(ORM) model)
 │   │       │   ├── city.route.js (Express route for /api/city/ routes)

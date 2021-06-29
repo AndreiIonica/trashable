@@ -14,4 +14,4 @@ class TrashcanType extends Model {
 	}
 }
 
-module.exports = TrashcanType;
+module.exports = { TrashcanType };

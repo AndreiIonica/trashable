@@ -2,7 +2,7 @@
 const { Model } = require('objection');
 
 // For relation mapping
-const Region = require('../region/region.model');
+const { Region } = require('../region/region.model');
 
 const schema = require('./city.schema.json');
 const tableNames = require('../../../constants/tableNames.json');
@@ -31,4 +31,4 @@ class City extends Model {
 	}
 }
 
-module.exports = City;
+module.exports = { City };

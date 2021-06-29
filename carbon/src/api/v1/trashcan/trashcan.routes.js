@@ -1,6 +1,6 @@
 const express = require('express');
 
-const Trashcan = require('./trashcan.model');
+const { Trashcan } = require('./trashcan.model');
 const { isLoggedIn } = require('../../../lib/jwt');
 
 const router = express.Router();

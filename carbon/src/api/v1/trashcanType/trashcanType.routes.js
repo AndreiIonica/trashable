@@ -2,7 +2,7 @@
 // but on tables with many relationships it will  create objects automatically
 const express = require('express');
 
-const TrashcanType = require('./trashcanType.model');
+const { TrashcanType } = require('./trashcanType.model');
 
 const router = express.Router();
 

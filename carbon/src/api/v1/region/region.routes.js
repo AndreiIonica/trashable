@@ -2,7 +2,7 @@
 // but on tables with many relationships it will  create objects automatically
 const express = require('express');
 
-const Region = require('./region.model');
+const { Region } = require('./region.model');
 
 const router = express.Router();
 

@@ -2,8 +2,8 @@
 const { Model } = require('objection');
 
 // For relation mapping
-const City = require('../city/city.model');
-const TrashcanType = require('../trashcanType/trashcanType.model');
+const { City } = require('../city/city.model');
+const { TrashcanType } = require('../trashcanType/trashcanType.model');
 
 const schema = require('./trashcan.schema.json');
 const tableNames = require('../../../constants/tableNames.json');
@@ -45,4 +45,4 @@ class Trashcan extends Model {
 	}
 }
 
-module.exports = Trashcan;
+module.exports = { Trashcan };

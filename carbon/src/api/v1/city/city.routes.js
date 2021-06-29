@@ -4,7 +4,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const City = require('./city.model');
+const { City } = require('./city.model');
 
 router.get('/', async (req, res, next) => {
 	try {

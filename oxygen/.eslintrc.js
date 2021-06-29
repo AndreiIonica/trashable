@@ -14,5 +14,8 @@ module.exports = {
     'no-alert': 0,
     // Airbnb is strange with import rules
     import: 0,
+    // switch to tabs
+    indent: ['error', 'tab'],
+    'no-tabs': 0,
   },
 };

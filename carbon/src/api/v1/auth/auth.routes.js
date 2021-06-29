@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const knex = require('../../../db');
 
 const jwt = require('../../../lib/jwt');
-const User = require('../user/user.model'); // to query the user for duplicate email/name
+const { UserRepo } = require('../../../repo/user'); // to query the user for duplicate email/name
 
 const router = express.Router();
 
@@ -46,7 +46,7 @@ router.post('/signup', async (req, res, next) => {
 		});
 
 		// this is good enough.it isn't  whort refactoring as this is the only place where we check fo a existing
-		let existingUser = await User.query().where({ email }).first();
+		let existingUser = await UserRepo.query().where({ email }).first();
 		if (existingUser) {
 			const error = new Error(errorTypes.emailUsed);
 			res.status(403);
@@ -54,7 +54,7 @@ router.post('/signup', async (req, res, next) => {
 		}
 
 		// Check if a user with that username exists.
-		existingUser = await User.query().where({ name }).first();
+		existingUser = await UserRepo.query().where({ name }).first();
 		if (existingUser) {
 			const error = new Error(errorTypes.nameUsed);
 			res.status(403);
@@ -63,7 +63,7 @@ router.post('/signup', async (req, res, next) => {
 
 		const hashedPassword = await bcrypt.hash(password, 12);
 
-		const insertedUser = await User.query().insert({
+		const insertedUser = await UserRepo.query().insert({
 			name,
 			email,
 			role,
@@ -93,7 +93,7 @@ router.post('/signup', async (req, res, next) => {
 router.post('/login', async (req, res, next) => {
 	const { email, password } = req.body;
 	try {
-		const user = await User.query().where({ email }).first();
+		const user = await UserRepo.query().where({ email }).first();
 		if (!user) {
 			const err = new Error(errorTypes.invalidLogin);
 			res.status(403);

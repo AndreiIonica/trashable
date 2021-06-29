@@ -1,10 +1,10 @@
 // The model Objection.js uses for validation
 const { Model } = require('objection');
 
-const schema = require('./region.schema.json');
-const tableNames = require('../../../constants/tableNames.json');
+const schema = require('./schema.json');
+const tableNames = require('../../constants/tableNames.json');
 
-class Region extends Model {
+class RegionRepoDB extends Model {
 	static get tableName() {
 		return tableNames.region;
 	}
@@ -14,4 +14,4 @@ class Region extends Model {
 	}
 }
 
-module.exports = { Region };
+module.exports = { RegionRepoDB };

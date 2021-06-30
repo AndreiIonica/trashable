@@ -2,7 +2,7 @@
 // but on tables with many relationships it will  create objects automatically
 const express = require('express');
 
-const { TrashcanTypeRepoDB } = require('../../../repo/trashcanType');
+const { TrashcanTypeService } = require('../../../services/trashcanType');
 
 const router = express.Router();
 
@@ -12,9 +12,7 @@ const router = express.Router();
 // Get all route
 router.get('/', async (req, res, next) => {
 	try {
-		const types = await TrashcanTypeRepoDB.query()
-			.select('id', 'name', 'created_at', 'updated_at')
-			.where('deleted_at', null);
+		const types = await TrashcanTypeService.getAll();
 
 		// Send back the object
 		res.json(types);
@@ -27,10 +25,7 @@ router.get('/', async (req, res, next) => {
 // Get one route
 router.get('/:id', async (req, res, next) => {
 	try {
-		const types = await TrashcanTypeRepoDB.query()
-			.select('id', 'name', 'created_at', 'updated_at')
-			.where('deleted_at', null)
-			.findById(req.params.id);
+		const types = await TrashcanTypeService.getById(req.params.id);
 
 		// Send back the object
 		res.json(types);

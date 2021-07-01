@@ -1,19 +1,30 @@
 const express = require('express');
-const { UserRepoDB } = require('../../../repo/user');
+
+const { UserService } = require('../../../services/user');
 
 const router = express.Router();
 
+// Get all route
 router.get('/', async (req, res, next) => {
 	try {
-		const fields = ['name', 'role', 'last_login', 'id'];
-
-		const users = await UserRepoDB.query()
-			.select(fields)
-			.where('deleted_at', null);
+		const users = await UserService.getAll();
 
 		res.json(users);
 	} catch (e) {
 		next(e);
+	}
+});
+
+// Get one route
+router.get('/:id', async (req, res, next) => {
+	try {
+		const user = await UserService.getById(req.params.id);
+
+		// Send back the object
+		res.json(user);
+	} catch (err) {
+		// forward the error to the error handler
+		next(err);
 	}
 });
 

@@ -2,7 +2,7 @@
 // but on tables with many relationships it will  create objects automatically
 const express = require('express');
 
-const { RegionRepoDB } = require('../../../repo/region');
+const { RegionService } = require('../../../services/region');
 
 const router = express.Router();
 
@@ -12,11 +12,7 @@ const router = express.Router();
 // Get all route
 router.get('/', async (req, res, next) => {
 	try {
-		// auto-filter
-		const regions = await RegionRepoDB.query()
-			.select('id', 'name', 'code', 'created_at', 'updated_at')
-			.where('deleted_at', null)
-			.where('deleted_at', null);
+		const regions = await RegionService.getAll();
 
 		// Send back the object
 		res.json(regions);
@@ -29,10 +25,7 @@ router.get('/', async (req, res, next) => {
 // Get one route
 router.get('/:id', async (req, res, next) => {
 	try {
-		const region = await RegionRepoDB.query()
-			.select('id', 'name', 'code', 'created_at', 'updated_at')
-			.findById(req.params.id)
-			.where('deleted_at', null);
+		const region = await RegionService.getById(req.params.id);
 
 		// Send back the object
 		res.json(region);

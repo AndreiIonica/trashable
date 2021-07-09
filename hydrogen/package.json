@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"main": "build/index.js",
 	"scripts": {
+		"postinstall": "tsc",
 		"build": "tsc",
 		"run": "tsc && node build/index.js",
 		"dev:watch": "tsc --watch & nodemon build"

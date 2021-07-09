@@ -1,7 +1,7 @@
 const express = require('express');
 
 const { TrashcanRepoDB } = require('../../../repo/trashcan');
-const { isLoggedIn } = require('../../../lib/jwt');
+const { AuthService } = require('../../../services/auth');
 
 const router = express.Router();
 
@@ -27,7 +27,7 @@ router.get('/:id', async (req, res, next) => {
 	}
 });
 
-router.post('/', isLoggedIn, async (req, res, next) => {
+router.post('/', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
 		req.body.user_id = req.user.id;
 		const trashcan = await TrashcanRepoDB.query()
@@ -40,7 +40,7 @@ router.post('/', isLoggedIn, async (req, res, next) => {
 	}
 });
 
-router.put('/:id', isLoggedIn, async (req, res, next) => {
+router.put('/:id', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
 		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
 		if (
@@ -64,7 +64,7 @@ router.put('/:id', isLoggedIn, async (req, res, next) => {
 	}
 });
 
-router.delete('/:id', isLoggedIn, async (req, res, next) => {
+router.delete('/:id', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
 		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
 		if (

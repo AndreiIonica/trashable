@@ -2,13 +2,13 @@
 const { Model } = require('objection');
 
 // For relation mapping
-const City = require('../city/city.model');
-const TrashcanType = require('../trashcanType/trashcanType.model');
+const { CityRepoDB } = require('../city');
+const { TrashcanTypeRepoDB } = require('../trashcanType');
 
-const schema = require('./trashcan.schema.json');
-const tableNames = require('../../../constants/tableNames.json');
+const schema = require('./schema.json');
+const tableNames = require('../../constants/tableNames.json');
 
-class Trashcan extends Model {
+class TrashcanRepoDB extends Model {
 	static get tableName() {
 		return tableNames.trashcan;
 	}
@@ -23,7 +23,7 @@ class Trashcan extends Model {
 				// Relation: ONE city has MANY trashcans
 				// so a trashcan belongs to a city
 				relation: Model.BelongsToOneRelation,
-				modelClass: City,
+				modelClass: CityRepoDB,
 				// Property by which to join them
 				join: {
 					from: 'city.id',
@@ -34,7 +34,7 @@ class Trashcan extends Model {
 				// Relation: ONE type has MANY trashcans
 				// so a trashcan belongs to one type
 				relation: Model.BelongsToOneRelation,
-				modelClass: TrashcanType,
+				modelClass: TrashcanTypeRepoDB,
 				// Property by which to join them
 				join: {
 					from: 'trashcan_type.id',
@@ -45,4 +45,4 @@ class Trashcan extends Model {
 	}
 }
 
-module.exports = Trashcan;
+module.exports = { TrashcanRepoDB };

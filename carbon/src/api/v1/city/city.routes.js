@@ -4,16 +4,13 @@ const express = require('express');
 
 const router = express.Router();
 
-const City = require('./city.model');
+// const { CityRepoDB } = require('../../../repo/city');
+const { CityService } = require('../../../services/city');
 
 router.get('/', async (req, res, next) => {
 	try {
-		// auto-filter(dont implement any filtering manually,)
-		// TODO: is this secure?
-		const queryParams = req.query;
-		const cities = await City.query()
-			.where(queryParams)
-			.where('deleted_at', null);
+		// TODO: secure way to implement filtering
+		const cities = await CityService.getAll();
 
 		res.json(cities);
 	} catch (err) {
@@ -23,10 +20,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => {
 	try {
-		const city = await City.query()
-			.select('id', 'name', 'region_id', 'updated_at', 'created_at')
-			.where('deleted_at', null)
-			.findById(req.params.id);
+		const city = await CityService.getById(req.params.id);
 
 		res.json(city);
 	} catch (err) {

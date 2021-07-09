@@ -1,8 +1,7 @@
 // Loads a list of counties(In Romania) from a json file, they are pre-cleaned
 // eslint-disable-next-line no-unused-vars
 const Knex = require('knex');
-const crypto = require('crypto'); // random bytes
-const bcrypt = require('bcrypt'); // hashing algo
+require('dotenv').config();
 const fs = require('fs'); // hashing algo
 
 const tableNames = require('../../src/constants/tableNames.json');
@@ -33,18 +32,13 @@ const citySeed = async (knex) => {
 };
 
 const userSeed = async (knex) => {
-	const password = crypto.randomBytes(15).toString('hex');
-
 	const user = {
-		email: 'thrashable.staff@gmail.com',
+		email: process.env.ADMIN_EMAIL,
 		name: 'Trasable Team',
-		password: await bcrypt.hash(password, 12),
 		role: 'admin'
 	};
 
 	const [createdUser] = await knex(tableNames.user).insert(user).returning('*');
-	createdUser.hashedPass = createdUser.password;
-	createdUser.password = password;
 
 	fs.writeFileSync('./utilizator.json', JSON.stringify(createdUser, null, 2));
 };

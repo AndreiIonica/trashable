@@ -12,19 +12,21 @@
 		"dev": "nodemon src/index.js"
 	},
 	"dependencies": {
-		"bcrypt": "^5.0.0",
 		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.5",
 		"cors": "^2.8.5",
 		"csv-parser": "^2.3.3",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
+		"express-session": "^1.17.2",
 		"helmet": "^4.0.0",
 		"jsonwebtoken": "^8.5.1",
 		"knex": "^0.21.4",
 		"morgan": "^1.10.0",
 		"objection": "^2.2.2",
-		"pg": "^8.3.0",
-		"yup": "^0.29.3"
+		"passport": "^0.4.1",
+		"passport-google-oauth20": "^2.0.0",
+		"pg": "^8.3.0"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.18",
@@ -41,5 +43,8 @@
 		"prettier": "^2.0.5",
 		"supertest": "^4.0.2"
 	},
-	"author": "AndreiIonica"
+	"author": "AndreiIonica",
+	"engines": {
+		"node": "16"
+	}
 }

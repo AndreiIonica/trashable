@@ -3,11 +3,17 @@ const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
 const cors = require('cors');
-// Security headers
 const helmet = require('helmet');
 
-// Connect to db
-const db = require('./db');
+// Login Libraries
+const passport = require('passport');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
+// Connect to db and setup auth
+require('dotenv').config();
+require('./db');
+require('./auth-setup');
 
 // notFound and a generic errorHandler
 const middlewares = require('./middlewares');
@@ -24,6 +30,13 @@ app.use(cors());
 app.use(compression());
 app.use(helmet());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(
+	session({ secret: 'keyboard cat', resave: false, saveUninitialized: false })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // generic response for the '/' route
 app.get('/', (req, res) => {

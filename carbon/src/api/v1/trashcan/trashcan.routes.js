@@ -29,7 +29,7 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('/', isLoggedIn, async (req, res, next) => {
 	try {
-		req.body.user_id = req.auth_data.id;
+		req.body.user_id = req.user.id;
 		const trashcan = await TrashcanRepoDB.query()
 			.insert(req.body)
 			.returning('*');
@@ -44,9 +44,7 @@ router.put('/:id', isLoggedIn, async (req, res, next) => {
 	try {
 		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
 		if (
-			!(
-				req.auth_data.id === trashcan.user_id || req.auth_data.role === 'admin'
-			) ||
+			!(req.user.id === trashcan.user_id || req.user.role === 'admin') ||
 			req.body.user_id
 		) {
 			res.status(403);
@@ -70,9 +68,7 @@ router.delete('/:id', isLoggedIn, async (req, res, next) => {
 	try {
 		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
 		if (
-			!(
-				req.auth_data.id === trashcan.user_id || req.auth_data.role === 'admin'
-			) ||
+			!(req.user.id === trashcan.user_id || req.user.role === 'admin') ||
 			req.body.user_id
 		) {
 			res.status(403);

@@ -17,6 +17,25 @@ class UserService {
 
 		return user;
 	}
+
+	static async findOrCreate(raw) {
+		const [user] = await UserRepoDB.query()
+			.select()
+			.where('email', raw.email.value)
+			.where('deleted_at', null);
+		if (user) return user;
+
+		// No created user
+		// Creating one now
+		const ins = {
+			email: raw.email.value,
+			name: raw.name,
+			role: 'normal'
+		};
+
+		const insertedUser = await UserRepoDB.query().insert(ins);
+		return insertedUser;
+	}
 }
 
 module.exports = { UserService };

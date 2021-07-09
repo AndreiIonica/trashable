@@ -19,10 +19,11 @@ function sign(payload) {
 // this is a express middleware
 function isLoggedIn(req, res, next) {
 	try {
-		const user = jwt.verify(req.header('auth-token'), process.env.JWT_SECRET);
-		req.auth_data = user;
+		const user = jwt.verify(req.cookies['auth-token'], process.env.JWT_SECRET);
+		req.user = user;
 		next();
 	} catch (e) {
+		res.status(401);
 		next(e);
 	}
 }

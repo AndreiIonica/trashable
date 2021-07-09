@@ -23,7 +23,6 @@ exports.up = async (knex) => {
 
 		table.string('email', 254).notNullable();
 		table.string('name', 20).notNullable();
-		table.string('password', 80).notNullable();
 
 		// example roles: admin, normal, mod
 		// so max number of chars is under 15
@@ -32,7 +31,7 @@ exports.up = async (knex) => {
 		// can be null
 		table.datetime('last_login');
 
-		table.unique(['email', 'name']);
+		table.unique(['email']);
 
 		addDefaults(table);
 	});

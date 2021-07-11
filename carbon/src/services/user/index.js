@@ -21,14 +21,14 @@ class UserService {
 	static async findOrCreate(raw) {
 		const [user] = await UserRepoDB.query()
 			.select()
-			.where('email', raw.email.value)
+			.where('email', raw.email)
 			.where('deleted_at', null);
 		if (user) return user;
 
 		// No created user
 		// Creating one now
 		const ins = {
-			email: raw.email.value,
+			email: raw.email,
 			name: raw.name,
 			role: 'normal'
 		};

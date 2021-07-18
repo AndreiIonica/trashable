@@ -12,6 +12,7 @@
 		"no-unused-vars": "warn",
 		"linebreak-style": "off",
 		"camelcase": 0,
-		"node/no-unpublished-require": "off"
+		"node/no-unpublished-require": "off",
+		"no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
 	}
 }

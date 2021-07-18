@@ -1,16 +1,20 @@
-const { CityRepoDB } = require('../../repo/city');
+const { CityRepoDB, CityRepoRedis } = require('../../repo/city');
 
 class CityService {
 	static async getAll() {
-		const cities = await CityRepoDB.query()
-			.select('id', 'name', 'region_id', 'created_at', 'updated_at')
-			.where('deleted_at', null);
+		let cities = await CityRepoRedis.getAll();
+		// It's in cache
+		if (cities !== undefined) return cities;
+
+		// Cache miss
+		cities = await CityRepoDB.query().where('deleted_at', null);
+		// Update in background
+		CityRepoRedis.writeAll(cities);
 		return cities;
 	}
 
 	static async getById(id) {
 		const cities = await CityRepoDB.query()
-			.select('id', 'name', 'region_id', 'created_at', 'updated_at')
 			.where('deleted_at', null)
 			.findById(id);
 

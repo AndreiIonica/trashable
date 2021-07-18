@@ -14,6 +14,7 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 require('./db');
 require('./auth-setup');
+require('./redis');
 
 // notFound and a generic errorHandler
 const middlewares = require('./middlewares');

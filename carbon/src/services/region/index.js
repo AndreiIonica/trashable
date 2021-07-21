@@ -1,18 +1,28 @@
-const { RegionRepoDB } = require('../../repo/region');
+const { RegionRepoDB, RegionRepoRedis } = require('../../repo/region');
 
 class RegionService {
 	static async getAll() {
-		const regions = await RegionRepoDB.query()
-			.select('id', 'name', 'code', 'created_at', 'updated_at')
-			.where('deleted_at', null);
+		let regions = await RegionRepoRedis.getAll();
+		// It's in cache
+		if (regions !== undefined) return regions;
+
+		// Cache miss
+		regions = await RegionRepoDB.query().where('deleted_at', null);
+		// Update in background
+		RegionRepoRedis.writeAll(regions);
 		return regions;
 	}
 
 	static async getById(id) {
-		const region = await RegionRepoDB.query()
-			.select('id', 'name', 'code', 'created_at', 'updated_at')
-			.where('deleted_at', null)
-			.findById(id);
+		let region = await RegionRepoRedis.getById(id);
+
+		// Found in cache
+		if (region !== undefined) return region;
+
+		// Cache miss
+		region = await RegionRepoDB.query().where('deleted_at', null).findById(id);
+		// Update in background
+		RegionRepoRedis.writeById(id, region);
 
 		return region;
 	}

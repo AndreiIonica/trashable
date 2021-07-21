@@ -14,11 +14,17 @@ class CityService {
 	}
 
 	static async getById(id) {
-		const cities = await CityRepoDB.query()
-			.where('deleted_at', null)
-			.findById(id);
+		let city = await CityRepoRedis.getById(id);
 
-		return cities;
+		// Found in cache
+		if (city !== undefined) return city;
+
+		// Cache miss
+		city = await CityRepoDB.query().where('deleted_at', null).findById(id);
+		// Update in background
+		CityRepoRedis.writeById(id, city);
+
+		return city;
 	}
 }
 

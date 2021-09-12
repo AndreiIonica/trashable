@@ -13,10 +13,8 @@
 		]
 	},
 	"scripts": {
-		"setup:cz": "commitizen init cz-conventional-changelog --yarn --dev --exact",
 		"start:carbon": "yarn workspace @trashable/carbon start",
-		"build:oxygen": "yarn workspace @trashable/oxygen build",
-		"cz": "cz"
+		"build:oxygen": "yarn workspace @trashable/oxygen build"
 	},
 	"license": "MIT",
 	"devDependencies": {

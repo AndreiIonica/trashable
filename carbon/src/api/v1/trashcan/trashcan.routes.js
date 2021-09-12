@@ -1,13 +1,13 @@
 const express = require('express');
 
-const { TrashcanRepoDB } = require('../../../repo/trashcan');
+const { TrashcanService } = require('../../../services/trashcan');
 const { AuthService } = require('../../../services/auth');
 
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
 	try {
-		const trashcans = await TrashcanRepoDB.query().where('deleted_at', null);
+		const trashcans = await TrashcanService.getAll();
 
 		res.json(trashcans);
 	} catch (err) {
@@ -17,9 +17,12 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => {
 	try {
-		const trashcan = await TrashcanRepoDB.query()
-			.findById(req.params.id)
-			.where('deleted_at', null);
+		const trashcan = await TrashcanService.getById(req.params.id);
+
+		if (trashcan === undefined) {
+			res.status(404);
+			throw new Error('invalid id');
+		}
 
 		res.json(trashcan);
 	} catch (err) {
@@ -30,9 +33,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
 		req.body.user_id = req.user.id;
-		const trashcan = await TrashcanRepoDB.query()
-			.insert(req.body)
-			.returning('*');
+		const trashcan = await TrashcanService.create(req.body);
 
 		res.json(trashcan);
 	} catch (err) {
@@ -42,23 +43,25 @@ router.post('/', AuthService.isLoggedIn, async (req, res, next) => {
 
 router.put('/:id', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
-		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
+		const trashcan = await TrashcanService.getById(req.params.id);
+		if (trashcan === undefined) {
+			res.status(404);
+			throw new Error('trashcan not found');
+		}
 		if (
 			!(req.user.id === trashcan.user_id || req.user.role === 'admin') ||
 			req.body.user_id
 		) {
 			res.status(403);
-			const err = new Error('You are not a mod or admin!');
-			throw err;
+			throw new Error('You are not a mod or admin!');
 		} else {
 			// update the trashcan
-			await TrashcanRepoDB.query().findById(req.params.id).patch(req.body);
+			await TrashcanService.update(req.params.id, req.body);
+			// Send back a generic message to let the client know it was succesful
+			res.json({
+				message: 'Executed correctly'
+			});
 		}
-
-		// Send back a generic message to let the client know it was succesful
-		res.json({
-			message: 'Executed correctly'
-		});
 	} catch (err) {
 		next(err);
 	}
@@ -66,25 +69,27 @@ router.put('/:id', AuthService.isLoggedIn, async (req, res, next) => {
 
 router.delete('/:id', AuthService.isLoggedIn, async (req, res, next) => {
 	try {
-		const trashcan = await TrashcanRepoDB.query().findById(req.params.id);
+		const trashcan = await TrashcanService.getById(req.params.id);
+		if (trashcan === undefined) {
+			res.status(404);
+			throw new Error('trashcan not found');
+		}
 		if (
 			!(req.user.id === trashcan.user_id || req.user.role === 'admin') ||
 			req.body.user_id
 		) {
 			res.status(403);
-			const err = new Error('You are not a mod or admin!');
-			throw err;
+			throw new Error('You are not a mod or admin!');
 		} else {
-			// Soft deletes
-			await TrashcanRepoDB.query().findById(req.params.id).patch({
+			// update the trashcan
+			await TrashcanService.update(req.params.id, {
 				deleted_at: new Date().toISOString()
 			});
+			// Send back a generic message to let the client know it was succesful
+			res.json({
+				message: 'Executed correctly'
+			});
 		}
-
-		// Send back a generic message to let the client know it was succesful
-		res.json({
-			message: 'Executed correctly'
-		});
 	} catch (err) {
 		next(err);
 	}

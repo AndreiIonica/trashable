@@ -7,11 +7,11 @@ class TrashcanTypeRepoRedis {
 		return JSON.parse(raw);
 	}
 
-	static async writeAll(cities) {
+	static async writeAll(types) {
 		// redis.set can set expire time in seconds: 60*10 means 10 minutes
 		await redis.set(
 			'type_all',
-			JSON.stringify(cities),
+			JSON.stringify(types),
 			'ex',
 			process.env.CACHE_EXPIRE_TIME
 		);
@@ -23,10 +23,10 @@ class TrashcanTypeRepoRedis {
 		return JSON.parse(raw);
 	}
 
-	static async writeById(id, city) {
+	static async writeById(id, type) {
 		await redis.set(
 			`type_${id}`,
-			JSON.stringify(city),
+			JSON.stringify(type),
 			'ex',
 			process.env.CACHE_EXPIRE_TIME
 		);

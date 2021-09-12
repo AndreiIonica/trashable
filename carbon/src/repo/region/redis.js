@@ -7,11 +7,11 @@ class RegionRepoRedis {
 		return JSON.parse(raw);
 	}
 
-	static async writeAll(cities) {
+	static async writeAll(regions) {
 		// redis.set can set expire time in seconds: 60*10 means 10 minutes
 		await redis.set(
 			'region_all',
-			JSON.stringify(cities),
+			JSON.stringify(regions),
 			'ex',
 			process.env.CACHE_EXPIRE_TIME
 		);
@@ -23,10 +23,10 @@ class RegionRepoRedis {
 		return JSON.parse(raw);
 	}
 
-	static async writeById(id, city) {
+	static async writeById(id, region) {
 		await redis.set(
 			`region_${id}`,
-			JSON.stringify(city),
+			JSON.stringify(region),
 			'ex',
 			process.env.CACHE_EXPIRE_TIME
 		);

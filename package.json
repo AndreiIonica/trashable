@@ -4,7 +4,7 @@
 	"workspaces": {
 		"packages": [
 			"carbon",
-			"oxygen",
+			"frontend",
 			"hydrogen"
 		],
 		"nohoist": [
@@ -14,19 +14,7 @@
 	},
 	"scripts": {
 		"start:carbon": "yarn workspace @trashable/carbon start",
-		"build:oxygen": "yarn workspace @trashable/oxygen build"
+		"build:frontend": "yarn workspace @trashable/frontend build"
 	},
-	"license": "MIT",
-	"devDependencies": {
-		"@commitlint/cli": "^12.1.4",
-		"@commitlint/config-conventional": "^12.1.4",
-		"commitizen": "^4.2.4",
-		"cz-customizable": "^6.3.0"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-customizable",
-			"defaultScope": "global"
-		}
-	}
+	"license": "MIT"
 }

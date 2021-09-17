@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import { SuccesResponse } from '../../sharedInterfaces';
 
 export interface LoginBody {
@@ -25,7 +24,7 @@ export async function SignUp(
 	user: SignupBody,
 	baseUrl = 'https://trashable-server.herokuapp.com',
 ): Promise<SignupResponse | SuccesResponse> {
-	const raw = await fetch(`${baseUrl}/api/v1/auth/signup`, {
+	const raw = await window.fetch(`${baseUrl}/api/v1/auth/signup`, {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
@@ -49,7 +48,7 @@ export async function LogIn(
 	user: LoginBody,
 	baseUrl = 'https://trashable-server.herokuapp.com',
 ): Promise<LoginResponse | SuccesResponse> {
-	const raw = await fetch(`${baseUrl}/api/v1/auth/login`, {
+	const raw = await window.fetch(`${baseUrl}/api/v1/auth/login`, {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',

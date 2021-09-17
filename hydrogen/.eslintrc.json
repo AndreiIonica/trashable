@@ -4,6 +4,9 @@
 		"plugin:@typescript-eslint/recommended",
 		"airbnb-base"
 	],
+	"env": {
+		"browser": true
+	},
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"no-unused-vars": "warn",

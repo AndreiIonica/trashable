@@ -3,7 +3,7 @@
 	"private": true,
 	"workspaces": {
 		"packages": [
-			"carbon",
+			"backend",
 			"frontend",
 			"hydrogen"
 		],
@@ -13,7 +13,7 @@
 		]
 	},
 	"scripts": {
-		"start:carbon": "yarn workspace @trashable/carbon start",
+		"start:backend": "yarn workspace @trashable/backend start",
 		"build:frontend": "yarn workspace @trashable/frontend build"
 	},
 	"license": "MIT"

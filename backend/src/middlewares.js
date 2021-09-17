@@ -16,6 +16,7 @@ function errorHandler(err, req, res, next) {
 	res.status(statusCode);
 
 	let { message } = err;
+	console.log(err);
 	if (err.message.includes('duplicate key value violates unique constraint')) {
 		message = 'The entityy that you are trying to create already exists';
 		res.status(409);

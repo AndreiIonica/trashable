@@ -8,9 +8,10 @@
 <script>
 /* eslint-disable object-curly-newline */
 // REFACTOR: refactor this in multiple files
+import { Trashcan } from '@trashable/hydrogen';
 import BottomBar from '../components/BottomBar.vue';
 import { createMap, currentLocIcon, distance, trashcanIcon } from '../lib/MapLoader';
-import { toateCosurile } from '../lib/DataManager';
+// import { toateCosurile } from '../lib/DataManager';
 
 // Because leaflet is loaded from a CDN and not from node_modules
 // vue doesnt know about it and throws a fit
@@ -28,9 +29,10 @@ export default {
 	},
 	async mounted() {
 		try {
-			this.trashcans = await toateCosurile();
+			this.trashcans = await Trashcan.GetAll();
 		} catch (error) {
-			console.log(error);
+			console.error(error);
+			alert('Momentan Trashable intampina probleme.Incercati mai tarziu sau contactati un administrator');
 		}
 
 		this.mapObj = createMap();

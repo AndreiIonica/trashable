@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-unfetch';
-
 export interface TrashcanType {
 	id: number;
 	name: string;
@@ -10,13 +8,13 @@ export interface TrashcanType {
 }
 
 export async function GetAll(baseUrl = 'https://trashable-server.herokuapp.com'): Promise<TrashcanType[]> {
-	const raw = await fetch(`${baseUrl}/api/v1/trashcanType`);
+	const raw = await window.fetch(`${baseUrl}/api/v1/trashcanType`);
 	const types = (await raw.json()) as TrashcanType[];
 	return types;
 }
 
 export async function GetOne(id: number, baseUrl = 'https://trashable-server.herokuapp.com'): Promise<TrashcanType> {
-	const raw = await fetch(`${baseUrl}/api/v1/trashcanType/${id}`);
+	const raw = await window.fetch(`${baseUrl}/api/v1/trashcanType/${id}`);
 	const type = (await raw.json()) as TrashcanType;
 	return type;
 }

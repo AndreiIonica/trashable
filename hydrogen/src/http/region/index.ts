@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-unfetch';
-
 export interface Region {
 	id: number;
 	name: string;
@@ -11,13 +9,13 @@ export interface Region {
 }
 
 export async function GetAll(baseUrl = 'https://trashable-server.herokuapp.com'): Promise<Region[]> {
-	const raw = await fetch(`${baseUrl}/api/v1/region/`);
+	const raw = await window.fetch(`${baseUrl}/api/v1/region/`);
 	const types = (await raw.json()) as Region[];
 	return types;
 }
 
 export async function GetOne(id: number, baseUrl = 'https://trashable-server.herokuapp.com'): Promise<Region> {
-	const raw = await fetch(`${baseUrl}/api/v1/region/${id}`);
+	const raw = await window.fetch(`${baseUrl}/api/v1/region/${id}`);
 	const type = (await raw.json()) as Region;
 	return type;
 }

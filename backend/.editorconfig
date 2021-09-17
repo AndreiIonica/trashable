@@ -1,0 +1,7 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false

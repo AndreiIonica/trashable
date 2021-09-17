@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Project specific
+data_seed/
+
+utilizator.json
+# docker compose volume
+pg_data/

@@ -18,9 +18,8 @@
 
 | Codebase             |  Description  |
 | :------------------- | :-----------: |
-| [carbon](carbon)     |  Express API  |
-| [nitrogen](nitrogen) |  Flutter App  |
-| [oxygen](oxygen)     | Vue frontend  |
+| [backend](backend)   |  Express API  |
+| [frontend](frontend) | Vue frontend  |
 | [hydrogen](hydrogen) | JS API Client |
 
 ```sh

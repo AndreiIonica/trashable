@@ -8,8 +8,7 @@
 			"hydrogen"
 		],
 		"nohoist": [
-			"**/@vue/cli-plugin-eslint",
-			"**/@vue/cli-plugin-eslint/**"
+			"**"
 		]
 	},
 	"scripts": {

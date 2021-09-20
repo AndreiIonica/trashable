@@ -1,19 +1,20 @@
-import Button from '../components/Button.vue';
+import MyButton from '../components/Button.vue';
 
 export default {
 	title: 'Button',
-	component: Button,
+	component: MyButton,
 };
 
 const Template = args => ({
-	// Components used in your story `template` are defined in the `components` object
-	components: { Button },
-	// The story's `args` need to be mapped into the template through the `setup()` method
+	components: { MyButton },
 	setup() {
 		return { args };
 	},
-	// And then the `args` are bound to your component with `v-bind="args"`
-	template: '<Button v-bind="args" />',
+	template: '<MyButton v-bind="args">{{ args.text }}</MyButton>',
 });
 
 export const Primary = Template.bind({});
+
+Primary.args = {
+	text: 'Primary Button',
+};

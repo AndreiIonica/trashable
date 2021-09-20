@@ -1,3 +1,7 @@
 <template>
-	<button>ASDF</button>
+	<button>
+		<span>
+			<slot></slot>
+		</span>
+	</button>
 </template>

@@ -2,4 +2,6 @@
 	<router-view />
 </template>
 
-<style></style>
+<style>
+@import './assets/styles/colors.css';
+</style>

@@ -1,18 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { Story } from '@storybook/vue3';
-import MyButton from '../components/Button.vue';
+import MyButton from '../components/ui/Button.vue';
 
 export default {
 	title: 'Button',
 	component: MyButton,
-	args: { text: 'Text' },
 };
 
-export interface ButtonStoryI {
-	text: string;
-}
-
-const Template: Story<ButtonStoryI> = args => ({
+const Template = args => ({
 	components: { MyButton },
 	setup() {
 		return { args };
@@ -23,4 +17,9 @@ const Template: Story<ButtonStoryI> = args => ({
 export const Primary = Template.bind({});
 Primary.args = {
 	text: 'Primary Button',
+};
+export const StartButton = Template.bind({});
+StartButton.args = {
+	text: 'START',
+	size: 'large',
 };

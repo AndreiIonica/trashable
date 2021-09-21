@@ -13,5 +13,8 @@ module.exports = {
 		'no-tabs': 0,
 		indent: ['error', 'tab'],
 		'arrow-parens': 0,
+		'no-shadow': 0,
+		'@typescript-eslint/no-shadow': ['error'],
+		'import/order': 0,
 	},
 };

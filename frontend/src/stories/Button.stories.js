@@ -14,12 +14,29 @@ const Template = args => ({
 	template: '<MyButton v-bind="args">{{ args.text }}</MyButton>',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-	text: 'Primary Button',
-};
 export const StartButton = Template.bind({});
 StartButton.args = {
 	text: 'START',
+};
+export const Closest = Template.bind({});
+Closest.args = {
+	text: 'IN APROPIERE',
+};
+
+export const ButtonLarge = Template.bind({});
+ButtonLarge.args = {
+	text: 'LARGE',
 	size: 'large',
+};
+
+export const ButtonNormal = Template.bind({});
+ButtonNormal.args = {
+	text: 'NORMAL',
+	size: 'normal',
+};
+
+export const ButtonSmall = Template.bind({});
+ButtonSmall.args = {
+	text: 'SMALL',
+	size: 'small',
 };

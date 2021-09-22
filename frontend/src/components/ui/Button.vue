@@ -7,21 +7,30 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, toRefs } from 'vue';
+import { defineProps } from 'vue';
 
-const enum sizeNames {
-	large,
-	normal,
-	small,
-}
+const sizeNames = {
+	large: {
+		padding: '1em 2em',
+		textSize: '1.2em',
+	},
+	normal: {
+		padding: '0.5em 1em',
+		textSize: '1em',
+	},
+	small: {
+		padding: '0.25em 0.5em',
+		textSize: '0.75em',
+	},
+};
 
 interface IButtonProps {
 	size?: keyof typeof sizeNames;
 }
 
 const props = defineProps<IButtonProps>();
-const { size } = toRefs(props);
-console.log(size?.value);
+
+const size = props.size ?? 'large';
 </script>
 
 <style scoped>
@@ -31,11 +40,13 @@ button {
 	justify-content: space-evenly;
 	align-items: center;
 
-	padding: 1rem 2rem;
+	padding: v-bind('sizeNames[size].padding');
 
 	background: var(--accent-color);
 	color: var(--text-color);
-	border-radius: 4rem;
+	font-size: v-bind('sizeNames[size].textSize');
+
+	border-radius: 4em;
 	border: 0;
 }
 </style>

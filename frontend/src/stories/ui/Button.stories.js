@@ -1,8 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import MyButton from '../components/ui/Button.vue';
+import MyButton from '../../components/ui/Button.vue';
 
 export default {
-	title: 'Button',
+	title: 'UI/Button',
 	component: MyButton,
 };
 

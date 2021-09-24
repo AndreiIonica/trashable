@@ -1,3 +1,5 @@
+.DS_Store
+node_modules
 /dist
 
 
@@ -14,11 +16,8 @@ pnpm-debug.log*
 # Editor directories and files
 .idea
 .vscode
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# dotenv environment variables file
-.env
-.env.test
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,10 @@
+:root {
+	--accent-color: #60ad5e;
+	--text-color: #ffffff;
+	--secondary-text: #757575;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+	font-family: 'Poppins', sans-serif;
+}

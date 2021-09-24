@@ -1,4 +1,4 @@
-# trashable-vue2
+# frontend
 
 ## Project setup
 ```

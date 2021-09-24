@@ -37,7 +37,7 @@ const size = props.size ?? 'large';
 button {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 
 	padding: v-bind('sizeNames[size].padding');

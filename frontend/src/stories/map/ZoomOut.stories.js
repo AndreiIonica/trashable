@@ -13,4 +13,4 @@ const Template = args => ({
 	template: '<MyZoomOut/>',
 });
 
-export const ZoomOut = Template.bind({});
+export const ZoomOutBtn = Template.bind({});

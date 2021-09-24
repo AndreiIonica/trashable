@@ -10,7 +10,7 @@
 button {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 
 	width: 2em;

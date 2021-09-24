@@ -13,4 +13,4 @@ const Template = args => ({
 	template: '<MyZoomIn/>',
 });
 
-export const ZoomIn = Template.bind({});
+export const ZoomInBtn = Template.bind({});

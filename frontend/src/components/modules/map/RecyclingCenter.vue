@@ -1,6 +1,6 @@
 <template>
 	<button>
-		<RecyclingIcon id="icon" />
+		<RecyclingIcon />
 	</button>
 </template>
 

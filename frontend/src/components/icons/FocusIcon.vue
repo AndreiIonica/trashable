@@ -1,6 +1,5 @@
 <template>
 	<!-- eslint-disable -->
-	<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 	<svg
 		version="1.1"
 		id="Capa_1"

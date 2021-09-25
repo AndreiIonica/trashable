@@ -6,16 +6,12 @@ export interface Trashcan {
 	longitude: number;
 	// eslint-disable-next-line camelcase
 	street_address: string;
-	altitude: number;
 	// eslint-disable-next-line camelcase
 	type_id: number;
 	// eslint-disable-next-line camelcase
 	city_id: number;
 	// eslint-disable-next-line camelcase
 	user_id: number;
-	clean: boolean | null;
-	// eslint-disable-next-line camelcase
-	photo_url: string | null;
 	// eslint-disable-next-line camelcase
 	created_at: string;
 	// eslint-disable-next-line camelcase

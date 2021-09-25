@@ -1,1757 +1,2342 @@
 [
 	{
-		"name": "Pitesti"
+		"name": "Pitesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bascov"
+		"name": "Bascov",
+		"region_id": 3
 	},
 	{
-		"name": "Braileni"
+		"name": "Braileni",
+		"region_id": 3
 	},
 	{
-		"name": "Glambocu"
+		"name": "Glambocu",
+		"region_id": 3
 	},
 	{
-		"name": "Mica"
+		"name": "Mica",
+		"region_id": 3
 	},
 	{
-		"name": "Prislopu Mic"
+		"name": "Prislopu Mic",
+		"region_id": 3
 	},
 	{
-		"name": "Scheau"
+		"name": "Scheau",
+		"region_id": 3
 	},
 	{
-		"name": "Uiasca"
+		"name": "Uiasca",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Ursului"
+		"name": "Valea Ursului",
+		"region_id": 3
 	},
 	{
-		"name": "Bradu"
+		"name": "Bradu",
+		"region_id": 3
 	},
 	{
-		"name": "Geamana"
+		"name": "Geamana",
+		"region_id": 3
 	},
 	{
-		"name": "Mioveni"
+		"name": "Mioveni",
+		"region_id": 3
 	},
 	{
-		"name": "Clucereasa"
+		"name": "Clucereasa",
+		"region_id": 3
 	},
 	{
-		"name": "Colibasi"
+		"name": "Colibasi",
+		"region_id": 3
 	},
 	{
-		"name": "Fagetu"
+		"name": "Fagetu",
+		"region_id": 3
 	},
 	{
-		"name": "Racovita"
+		"name": "Racovita",
+		"region_id": 3
 	},
 	{
-		"name": "Maracineni"
+		"name": "Maracineni",
+		"region_id": 3
 	},
 	{
-		"name": "Argeselu"
+		"name": "Argeselu",
+		"region_id": 3
 	},
 	{
-		"name": "Stefanesti"
+		"name": "Stefanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Enculesti"
+		"name": "Enculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Golesti"
+		"name": "Golesti",
+		"region_id": 3
 	},
 	{
-		"name": "Izvorani"
+		"name": "Izvorani",
+		"region_id": 3
 	},
 	{
-		"name": "Stefanestii Noi"
+		"name": "Stefanestii Noi",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Mare-Podgoria"
+		"name": "Valea Mare-Podgoria",
+		"region_id": 3
 	},
 	{
-		"name": "Viisoara"
+		"name": "Viisoara",
+		"region_id": 3
 	},
 	{
-		"name": "Zavoi"
+		"name": "Zavoi",
+		"region_id": 3
 	},
 	{
-		"name": "Campulung"
+		"name": "Campulung",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Rumanestilor"
+		"name": "Valea Rumanestilor",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Mare Pravat"
+		"name": "Valea Mare Pravat",
+		"region_id": 3
 	},
 	{
-		"name": "Bilcesti"
+		"name": "Bilcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Colnic"
+		"name": "Colnic",
+		"region_id": 3
 	},
 	{
-		"name": "Fantanea"
+		"name": "Fantanea",
+		"region_id": 3
 	},
 	{
-		"name": "Gura Pravat"
+		"name": "Gura Pravat",
+		"region_id": 3
 	},
 	{
-		"name": "Namaesti"
+		"name": "Namaesti",
+		"region_id": 3
 	},
 	{
-		"name": "Pietroasa"
+		"name": "Pietroasa",
+		"region_id": 3
 	},
 	{
-		"name": "Selari"
+		"name": "Selari",
+		"region_id": 3
 	},
 	{
-		"name": "Curtea de Arges"
+		"name": "Curtea de Arges",
+		"region_id": 3
 	},
 	{
-		"name": "Noaptes"
+		"name": "Noaptes",
+		"region_id": 3
 	},
 	{
-		"name": "Costesti"
+		"name": "Costesti",
+		"region_id": 3
 	},
 	{
-		"name": "Brosteni"
+		"name": "Brosteni",
+		"region_id": 3
 	},
 	{
-		"name": "Laceni"
+		"name": "Laceni",
+		"region_id": 3
 	},
 	{
-		"name": "Parvu Rosu"
+		"name": "Parvu Rosu",
+		"region_id": 3
 	},
 	{
-		"name": "Podu Brosteni"
+		"name": "Podu Brosteni",
+		"region_id": 3
 	},
 	{
-		"name": "Smei"
+		"name": "Smei",
+		"region_id": 3
 	},
 	{
-		"name": "Starci"
+		"name": "Starci",
+		"region_id": 3
 	},
 	{
-		"name": "Topoloveni"
+		"name": "Topoloveni",
+		"region_id": 3
 	},
 	{
-		"name": "Botarcani"
+		"name": "Botarcani",
+		"region_id": 3
 	},
 	{
-		"name": "Crintesti"
+		"name": "Crintesti",
+		"region_id": 3
 	},
 	{
-		"name": "Goranesti"
+		"name": "Goranesti",
+		"region_id": 3
 	},
 	{
-		"name": "Tiganesti"
+		"name": "Tiganesti",
+		"region_id": 3
 	},
 	{
-		"name": "Albestii Pamanteni"
+		"name": "Albestii Pamanteni",
+		"region_id": 3
 	},
 	{
-		"name": "Albestii Ungureni"
+		"name": "Albestii Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Bratesti"
+		"name": "Bratesti",
+		"region_id": 3
 	},
 	{
-		"name": "Doblea"
+		"name": "Doblea",
+		"region_id": 3
 	},
 	{
-		"name": "Dobrotu"
+		"name": "Dobrotu",
+		"region_id": 3
 	},
 	{
-		"name": "Dumiresti"
+		"name": "Dumiresti",
+		"region_id": 3
 	},
 	{
-		"name": "Florieni"
+		"name": "Florieni",
+		"region_id": 3
 	},
 	{
-		"name": "Bughea de Sus"
+		"name": "Bughea de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Albesti"
+		"name": "Albesti",
+		"region_id": 3
 	},
 	{
-		"name": "Candesti"
+		"name": "Candesti",
+		"region_id": 3
 	},
 	{
-		"name": "Albota"
+		"name": "Albota",
+		"region_id": 3
 	},
 	{
-		"name": "Cerbu"
+		"name": "Cerbu",
+		"region_id": 3
 	},
 	{
-		"name": "Fratesti"
+		"name": "Fratesti",
+		"region_id": 3
 	},
 	{
-		"name": "Gura Vaii"
+		"name": "Gura Vaii",
+		"region_id": 3
 	},
 	{
-		"name": "Mares"
+		"name": "Mares",
+		"region_id": 3
 	},
 	{
-		"name": "Aninoasa"
+		"name": "Aninoasa",
+		"region_id": 3
 	},
 	{
-		"name": "Brosteni"
+		"name": "Brosteni",
+		"region_id": 3
 	},
 	{
-		"name": "Slanic"
+		"name": "Slanic",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Silistii"
+		"name": "Valea Silistii",
+		"region_id": 3
 	},
 	{
-		"name": "Capatanenii Pamanteni"
+		"name": "Capatanenii Pamanteni",
+		"region_id": 3
 	},
 	{
-		"name": "Arefu"
+		"name": "Arefu",
+		"region_id": 3
 	},
 	{
-		"name": "Capatanenii Ungureni"
+		"name": "Capatanenii Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Babana"
+		"name": "Babana",
+		"region_id": 3
 	},
 	{
-		"name": "Bajanesti"
+		"name": "Bajanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciobanesti"
+		"name": "Ciobanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cotmenita"
+		"name": "Cotmenita",
+		"region_id": 3
 	},
 	{
-		"name": "Grosi"
+		"name": "Grosi",
+		"region_id": 3
 	},
 	{
-		"name": "Lupueni"
+		"name": "Lupueni",
+		"region_id": 3
 	},
 	{
-		"name": "Slaatioarele"
+		"name": "Slaatioarele",
+		"region_id": 3
 	},
 	{
-		"name": "Baiculesti"
+		"name": "Baiculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Alunisu"
+		"name": "Alunisu",
+		"region_id": 3
 	},
 	{
-		"name": "Anghinesti"
+		"name": "Anghinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Argesani"
+		"name": "Argesani",
+		"region_id": 3
 	},
 	{
-		"name": "Manicesti"
+		"name": "Manicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Stejari"
+		"name": "Stejari",
+		"region_id": 3
 	},
 	{
-		"name": "Tutana"
+		"name": "Tutana",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Brazilor"
+		"name": "Valea Brazilor",
+		"region_id": 3
 	},
 	{
-		"name": "Valea lui Enache"
+		"name": "Valea lui Enache",
+		"region_id": 3
 	},
 	{
-		"name": "Zigoneni"
+		"name": "Zigoneni",
+		"region_id": 3
 	},
 	{
-		"name": "Balilesti"
+		"name": "Balilesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bajesti"
+		"name": "Bajesti",
+		"region_id": 3
 	},
 	{
-		"name": "Golesti"
+		"name": "Golesti",
+		"region_id": 3
 	},
 	{
-		"name": "Poienita"
+		"name": "Poienita",
+		"region_id": 3
 	},
 	{
-		"name": "Priboaia"
+		"name": "Priboaia",
+		"region_id": 3
 	},
 	{
-		"name": "Ulita"
+		"name": "Ulita",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Mare-Bratia"
+		"name": "Valea Mare-Bratia",
+		"region_id": 3
 	},
 	{
-		"name": "Zgripcesti"
+		"name": "Zgripcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Beleti"
+		"name": "Beleti",
+		"region_id": 3
 	},
 	{
-		"name": "Lentea"
+		"name": "Lentea",
+		"region_id": 3
 	},
 	{
-		"name": "Negresti"
+		"name": "Negresti",
+		"region_id": 3
 	},
 	{
-		"name": "Berevoesti"
+		"name": "Berevoesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bratia"
+		"name": "Bratia",
+		"region_id": 3
 	},
 	{
-		"name": "Gamacesti"
+		"name": "Gamacesti",
+		"region_id": 3
 	},
 	{
-		"name": "Otelu"
+		"name": "Otelu",
+		"region_id": 3
 	},
 	{
-		"name": "Barla"
+		"name": "Barla",
+		"region_id": 3
 	},
 	{
-		"name": "Afrimesti"
+		"name": "Afrimesti",
+		"region_id": 3
 	},
 	{
-		"name": "Badesti"
+		"name": "Badesti",
+		"region_id": 3
 	},
 	{
-		"name": "Brabeti"
+		"name": "Brabeti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciocesti"
+		"name": "Ciocesti",
+		"region_id": 3
 	},
 	{
-		"name": "Malu"
+		"name": "Malu",
+		"region_id": 3
 	},
 	{
-		"name": "Mandra"
+		"name": "Mandra",
+		"region_id": 3
 	},
 	{
-		"name": "Mozacenii-Vale"
+		"name": "Mozacenii-Vale",
+		"region_id": 3
 	},
 	{
-		"name": "Podisoru"
+		"name": "Podisoru",
+		"region_id": 3
 	},
 	{
-		"name": "Selareasca"
+		"name": "Selareasca",
+		"region_id": 3
 	},
 	{
-		"name": "Urlueni"
+		"name": "Urlueni",
+		"region_id": 3
 	},
 	{
-		"name": "Zuvelcati"
+		"name": "Zuvelcati",
+		"region_id": 3
 	},
 	{
-		"name": "Bogati"
+		"name": "Bogati",
+		"region_id": 3
 	},
 	{
-		"name": "Barloi"
+		"name": "Barloi",
+		"region_id": 3
 	},
 	{
-		"name": "Bujoi"
+		"name": "Bujoi",
+		"region_id": 3
 	},
 	{
-		"name": "Chitesti"
+		"name": "Chitesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dumbrava"
+		"name": "Dumbrava",
+		"region_id": 3
 	},
 	{
-		"name": "Glambocel"
+		"name": "Glambocel",
+		"region_id": 3
 	},
 	{
-		"name": "Glambocelu"
+		"name": "Glambocelu",
+		"region_id": 3
 	},
 	{
-		"name": "Suseni"
+		"name": "Suseni",
+		"region_id": 3
 	},
 	{
-		"name": "Boteni"
+		"name": "Boteni",
+		"region_id": 3
 	},
 	{
-		"name": "Balabani"
+		"name": "Balabani",
+		"region_id": 3
 	},
 	{
-		"name": "Lunca"
+		"name": "Lunca",
+		"region_id": 3
 	},
 	{
-		"name": "Muscel"
+		"name": "Muscel",
+		"region_id": 3
 	},
 	{
-		"name": "Botesti"
+		"name": "Botesti",
+		"region_id": 3
 	},
 	{
-		"name": "Mosteni-Greci"
+		"name": "Mosteni-Greci",
+		"region_id": 3
 	},
 	{
-		"name": "Bradulet"
+		"name": "Bradulet",
+		"region_id": 3
 	},
 	{
-		"name": "Alunisu"
+		"name": "Alunisu",
+		"region_id": 3
 	},
 	{
-		"name": "Bradetu"
+		"name": "Bradetu",
+		"region_id": 3
 	},
 	{
-		"name": "Cosaci"
+		"name": "Cosaci",
+		"region_id": 3
 	},
 	{
-		"name": "Galesu"
+		"name": "Galesu",
+		"region_id": 3
 	},
 	{
-		"name": "Piatra"
+		"name": "Piatra",
+		"region_id": 3
 	},
 	{
-		"name": "Slamnesti"
+		"name": "Slamnesti",
+		"region_id": 3
 	},
 	{
-		"name": "Uleni"
+		"name": "Uleni",
+		"region_id": 3
 	},
 	{
-		"name": "Ungureni"
+		"name": "Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Budeasa Mare"
+		"name": "Budeasa Mare",
+		"region_id": 3
 	},
 	{
-		"name": "Budeasa Mica"
+		"name": "Budeasa Mica",
+		"region_id": 3
 	},
 	{
-		"name": "Calotesti"
+		"name": "Calotesti",
+		"region_id": 3
 	},
 	{
-		"name": "Galasesti"
+		"name": "Galasesti",
+		"region_id": 3
 	},
 	{
-		"name": "Rogojina"
+		"name": "Rogojina",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Marului"
+		"name": "Valea Marului",
+		"region_id": 3
 	},
 	{
-		"name": "Bughea de Jos"
+		"name": "Bughea de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Vulpesti"
+		"name": "Vulpesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bujoreni"
+		"name": "Bujoreni",
+		"region_id": 3
 	},
 	{
-		"name": "Buzoesti"
+		"name": "Buzoesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cornatel"
+		"name": "Cornatel",
+		"region_id": 3
 	},
 	{
-		"name": "Curteanca"
+		"name": "Curteanca",
+		"region_id": 3
 	},
 	{
-		"name": "Ionesti"
+		"name": "Ionesti",
+		"region_id": 3
 	},
 	{
-		"name": "Podeni"
+		"name": "Podeni",
+		"region_id": 3
 	},
 	{
-		"name": "Redea"
+		"name": "Redea",
+		"region_id": 3
 	},
 	{
-		"name": "Serboeni"
+		"name": "Serboeni",
+		"region_id": 3
 	},
 	{
-		"name": "Tomsanca"
+		"name": "Tomsanca",
+		"region_id": 3
 	},
 	{
-		"name": "Vladuta"
+		"name": "Vladuta",
+		"region_id": 3
 	},
 	{
-		"name": "Caldararu"
+		"name": "Caldararu",
+		"region_id": 3
 	},
 	{
-		"name": "Burdea"
+		"name": "Burdea",
+		"region_id": 3
 	},
 	{
-		"name": "Strambeni"
+		"name": "Strambeni",
+		"region_id": 3
 	},
 	{
-		"name": "Vranesti"
+		"name": "Vranesti",
+		"region_id": 3
 	},
 	{
-		"name": "Calinesti"
+		"name": "Calinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciocanesti"
+		"name": "Ciocanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Carstieni"
+		"name": "Carstieni",
+		"region_id": 3
 	},
 	{
-		"name": "Glodu"
+		"name": "Glodu",
+		"region_id": 3
 	},
 	{
-		"name": "Gorganu"
+		"name": "Gorganu",
+		"region_id": 3
 	},
 	{
-		"name": "Radu Negru"
+		"name": "Radu Negru",
+		"region_id": 3
 	},
 	{
-		"name": "Rancaciov"
+		"name": "Rancaciov",
+		"region_id": 3
 	},
 	{
-		"name": "Udeni-Zavoi"
+		"name": "Udeni-Zavoi",
+		"region_id": 3
 	},
 	{
-		"name": "Urlucea"
+		"name": "Urlucea",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Corbului"
+		"name": "Valea Corbului",
+		"region_id": 3
 	},
 	{
-		"name": "Valeni-Podgoria"
+		"name": "Valeni-Podgoria",
+		"region_id": 3
 	},
 	{
-		"name": "Cateasca"
+		"name": "Cateasca",
+		"region_id": 3
 	},
 	{
-		"name": "Catanele"
+		"name": "Catanele",
+		"region_id": 3
 	},
 	{
-		"name": "Ciresu"
+		"name": "Ciresu",
+		"region_id": 3
 	},
 	{
-		"name": "Coseri"
+		"name": "Coseri",
+		"region_id": 3
 	},
 	{
-		"name": "Gruiu"
+		"name": "Gruiu",
+		"region_id": 3
 	},
 	{
-		"name": "Recea"
+		"name": "Recea",
+		"region_id": 3
 	},
 	{
-		"name": "Silistea"
+		"name": "Silistea",
+		"region_id": 3
 	},
 	{
-		"name": "Ceparii Pamanteni"
+		"name": "Ceparii Pamanteni",
+		"region_id": 3
 	},
 	{
-		"name": "Carpenis"
+		"name": "Carpenis",
+		"region_id": 3
 	},
 	{
-		"name": "Ceparii Ungureni"
+		"name": "Ceparii Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Morasti"
+		"name": "Morasti",
+		"region_id": 3
 	},
 	{
-		"name": "Sendrulesti"
+		"name": "Sendrulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Urluiesti"
+		"name": "Urluiesti",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Magurei"
+		"name": "Valea Magurei",
+		"region_id": 3
 	},
 	{
-		"name": "Zamfiresti"
+		"name": "Zamfiresti",
+		"region_id": 3
 	},
 	{
-		"name": "Cetateni"
+		"name": "Cetateni",
+		"region_id": 3
 	},
 	{
-		"name": "Laicai"
+		"name": "Laicai",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Cetatuia"
+		"name": "Valea Cetatuia",
+		"region_id": 3
 	},
 	{
-		"name": "Cicanesti"
+		"name": "Cicanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Barasti"
+		"name": "Barasti",
+		"region_id": 3
 	},
 	{
-		"name": "Mioarele"
+		"name": "Mioarele",
+		"region_id": 3
 	},
 	{
-		"name": "Urechesti"
+		"name": "Urechesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciofrangeni"
+		"name": "Ciofrangeni",
+		"region_id": 3
 	},
 	{
-		"name": "Burlusi"
+		"name": "Burlusi",
+		"region_id": 3
 	},
 	{
-		"name": "Lacurile"
+		"name": "Lacurile",
+		"region_id": 3
 	},
 	{
-		"name": "Piatra"
+		"name": "Piatra",
+		"region_id": 3
 	},
 	{
-		"name": "Schitu-Matei"
+		"name": "Schitu-Matei",
+		"region_id": 3
 	},
 	{
-		"name": "Radutesti"
+		"name": "Radutesti",
+		"region_id": 3
 	},
 	{
-		"name": "Beculesti"
+		"name": "Beculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bratia"
+		"name": "Bratia",
+		"region_id": 3
 	},
 	{
-		"name": "Ciomagesti"
+		"name": "Ciomagesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cungrea"
+		"name": "Cungrea",
+		"region_id": 3
 	},
 	{
-		"name": "Dogari"
+		"name": "Dogari",
+		"region_id": 3
 	},
 	{
-		"name": "Fedelesoiu"
+		"name": "Fedelesoiu",
+		"region_id": 3
 	},
 	{
-		"name": "Giuclani"
+		"name": "Giuclani",
+		"region_id": 3
 	},
 	{
-		"name": "Paunesti"
+		"name": "Paunesti",
+		"region_id": 3
 	},
 	{
-		"name": "Rachitele de Jos"
+		"name": "Rachitele de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Barbatesti"
+		"name": "Barbatesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cocu"
+		"name": "Cocu",
+		"region_id": 3
 	},
 	{
-		"name": "Crucisoara"
+		"name": "Crucisoara",
+		"region_id": 3
 	},
 	{
-		"name": "Facaletesti"
+		"name": "Facaletesti",
+		"region_id": 3
 	},
 	{
-		"name": "Greabanu"
+		"name": "Greabanu",
+		"region_id": 3
 	},
 	{
-		"name": "Popesti"
+		"name": "Popesti",
+		"region_id": 3
 	},
 	{
-		"name": "Rachitele de Sus"
+		"name": "Rachitele de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Corbeni"
+		"name": "Corbeni",
+		"region_id": 3
 	},
 	{
-		"name": "Berindesti"
+		"name": "Berindesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bucsenesti"
+		"name": "Bucsenesti",
+		"region_id": 3
 	},
 	{
-		"name": "Oestii Pamanteni"
+		"name": "Oestii Pamanteni",
+		"region_id": 3
 	},
 	{
-		"name": "Oestii Ungureni"
+		"name": "Oestii Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Poienari"
+		"name": "Poienari",
+		"region_id": 3
 	},
 	{
-		"name": "Rotunda"
+		"name": "Rotunda",
+		"region_id": 3
 	},
 	{
-		"name": "Turburea"
+		"name": "Turburea",
+		"region_id": 3
 	},
 	{
-		"name": "Corbi"
+		"name": "Corbi",
+		"region_id": 3
 	},
 	{
-		"name": "Corbsori"
+		"name": "Corbsori",
+		"region_id": 3
 	},
 	{
-		"name": "Jgheaburi"
+		"name": "Jgheaburi",
+		"region_id": 3
 	},
 	{
-		"name": "Poduri"
+		"name": "Poduri",
+		"region_id": 3
 	},
 	{
-		"name": "Poienarei"
+		"name": "Poienarei",
+		"region_id": 3
 	},
 	{
-		"name": "Stanesti"
+		"name": "Stanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cosesti"
+		"name": "Cosesti",
+		"region_id": 3
 	},
 	{
-		"name": "Jupanesti"
+		"name": "Jupanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Lapusani"
+		"name": "Lapusani",
+		"region_id": 3
 	},
 	{
-		"name": "Leicesti"
+		"name": "Leicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Pacioiu"
+		"name": "Pacioiu",
+		"region_id": 3
 	},
 	{
-		"name": "Petresti"
+		"name": "Petresti",
+		"region_id": 3
 	},
 	{
-		"name": "Priseaca"
+		"name": "Priseaca",
+		"region_id": 3
 	},
 	{
-		"name": "Cotmeana"
+		"name": "Cotmeana",
+		"region_id": 3
 	},
 	{
-		"name": "Bascovele"
+		"name": "Bascovele",
+		"region_id": 3
 	},
 	{
-		"name": "Bunesti"
+		"name": "Bunesti",
+		"region_id": 3
 	},
 	{
-		"name": "Costesti"
+		"name": "Costesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Padurii"
+		"name": "Dealu Padurii",
+		"region_id": 3
 	},
 	{
-		"name": "Dragolesti"
+		"name": "Dragolesti",
+		"region_id": 3
 	},
 	{
-		"name": "Lintesti"
+		"name": "Lintesti",
+		"region_id": 3
 	},
 	{
-		"name": "Negesti"
+		"name": "Negesti",
+		"region_id": 3
 	},
 	{
-		"name": "Pielesti"
+		"name": "Pielesti",
+		"region_id": 3
 	},
 	{
-		"name": "Sandulesti"
+		"name": "Sandulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Spiridoni"
+		"name": "Spiridoni",
+		"region_id": 3
 	},
 	{
-		"name": "Ursoaia"
+		"name": "Ursoaia",
+		"region_id": 3
 	},
 	{
-		"name": "Varloveni"
+		"name": "Varloveni",
+		"region_id": 3
 	},
 	{
-		"name": "Zamfiresti"
+		"name": "Zamfiresti",
+		"region_id": 3
 	},
 	{
-		"name": "Cuca"
+		"name": "Cuca",
+		"region_id": 3
 	},
 	{
-		"name": "Baltata"
+		"name": "Baltata",
+		"region_id": 3
 	},
 	{
-		"name": "Barbalani"
+		"name": "Barbalani",
+		"region_id": 3
 	},
 	{
-		"name": "Carcesti"
+		"name": "Carcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cotu"
+		"name": "Cotu",
+		"region_id": 3
 	},
 	{
-		"name": "Crivatu"
+		"name": "Crivatu",
+		"region_id": 3
 	},
 	{
-		"name": "Launele de Sus"
+		"name": "Launele de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Macai"
+		"name": "Macai",
+		"region_id": 3
 	},
 	{
-		"name": "Manesti"
+		"name": "Manesti",
+		"region_id": 3
 	},
 	{
-		"name": "Sinesti"
+		"name": "Sinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Stanicei"
+		"name": "Stanicei",
+		"region_id": 3
 	},
 	{
-		"name": "Teodoresti"
+		"name": "Teodoresti",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Cucii"
+		"name": "Valea Cucii",
+		"region_id": 3
 	},
 	{
-		"name": "Vonigeasa"
+		"name": "Vonigeasa",
+		"region_id": 3
 	},
 	{
-		"name": "Davidesti"
+		"name": "Davidesti",
+		"region_id": 3
 	},
 	{
-		"name": "Contesti"
+		"name": "Contesti",
+		"region_id": 3
 	},
 	{
-		"name": "Voroveni"
+		"name": "Voroveni",
+		"region_id": 3
 	},
 	{
-		"name": "Dambovicioara"
+		"name": "Dambovicioara",
+		"region_id": 3
 	},
 	{
-		"name": "Ciocanu"
+		"name": "Ciocanu",
+		"region_id": 3
 	},
 	{
-		"name": "Podu Dambovitei"
+		"name": "Podu Dambovitei",
+		"region_id": 3
 	},
 	{
-		"name": "Darmanesti"
+		"name": "Darmanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Negreni"
+		"name": "Negreni",
+		"region_id": 3
 	},
 	{
-		"name": "Piscani"
+		"name": "Piscani",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Nandrii"
+		"name": "Valea Nandrii",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Rizii"
+		"name": "Valea Rizii",
+		"region_id": 3
 	},
 	{
-		"name": "Dobresti"
+		"name": "Dobresti",
+		"region_id": 3
 	},
 	{
-		"name": "Furesti"
+		"name": "Furesti",
+		"region_id": 3
 	},
 	{
-		"name": "Domnesti"
+		"name": "Domnesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dragoslavele"
+		"name": "Dragoslavele",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Hotarului"
+		"name": "Valea Hotarului",
+		"region_id": 3
 	},
 	{
-		"name": "Draganu-Olteni"
+		"name": "Draganu-Olteni",
+		"region_id": 3
 	},
 	{
-		"name": "Bacesti"
+		"name": "Bacesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dumbravesti"
+		"name": "Dumbravesti",
+		"region_id": 3
 	},
 	{
-		"name": "Prislopu Mare"
+		"name": "Prislopu Mare",
+		"region_id": 3
 	},
 	{
-		"name": "Godeni"
+		"name": "Godeni",
+		"region_id": 3
 	},
 	{
-		"name": "Bordeieni"
+		"name": "Bordeieni",
+		"region_id": 3
 	},
 	{
-		"name": "Capu Piscului"
+		"name": "Capu Piscului",
+		"region_id": 3
 	},
 	{
-		"name": "Cotesti"
+		"name": "Cotesti",
+		"region_id": 3
 	},
 	{
-		"name": "Malu"
+		"name": "Malu",
+		"region_id": 3
 	},
 	{
-		"name": "Harsesti"
+		"name": "Harsesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciobani"
+		"name": "Ciobani",
+		"region_id": 3
 	},
 	{
-		"name": "Martalogi"
+		"name": "Martalogi",
+		"region_id": 3
 	},
 	{
-		"name": "Hartiesti"
+		"name": "Hartiesti",
+		"region_id": 3
 	},
 	{
-		"name": "Barzesti"
+		"name": "Barzesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu"
+		"name": "Dealu",
+		"region_id": 3
 	},
 	{
-		"name": "Huluba"
+		"name": "Huluba",
+		"region_id": 3
 	},
 	{
-		"name": "Lespezi"
+		"name": "Lespezi",
+		"region_id": 3
 	},
 	{
-		"name": "Lucieni"
+		"name": "Lucieni",
+		"region_id": 3
 	},
 	{
-		"name": "Vulturesti"
+		"name": "Vulturesti",
+		"region_id": 3
 	},
 	{
-		"name": "Izvoru"
+		"name": "Izvoru",
+		"region_id": 3
 	},
 	{
-		"name": "Leordeni"
+		"name": "Leordeni",
+		"region_id": 3
 	},
 	{
-		"name": "Baloteasca"
+		"name": "Baloteasca",
+		"region_id": 3
 	},
 	{
-		"name": "Baila"
+		"name": "Baila",
+		"region_id": 3
 	},
 	{
-		"name": "Bantau"
+		"name": "Bantau",
+		"region_id": 3
 	},
 	{
-		"name": "Budisteni"
+		"name": "Budisteni",
+		"region_id": 3
 	},
 	{
-		"name": "Ciolcesti"
+		"name": "Ciolcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciulnita"
+		"name": "Ciulnita",
+		"region_id": 3
 	},
 	{
-		"name": "Carciumaresti"
+		"name": "Carciumaresti",
+		"region_id": 3
 	},
 	{
-		"name": "Cotu Malului"
+		"name": "Cotu Malului",
+		"region_id": 3
 	},
 	{
-		"name": "Glambocata"
+		"name": "Glambocata",
+		"region_id": 3
 	},
 	{
-		"name": "Glambocata-Deal"
+		"name": "Glambocata-Deal",
+		"region_id": 3
 	},
 	{
-		"name": "Glodu"
+		"name": "Glodu",
+		"region_id": 3
 	},
 	{
-		"name": "Moara Mocanului"
+		"name": "Moara Mocanului",
+		"region_id": 3
 	},
 	{
-		"name": "Schitu Scoicesti"
+		"name": "Schitu Scoicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Leresti"
+		"name": "Leresti",
+		"region_id": 3
 	},
 	{
-		"name": "Pojorata"
+		"name": "Pojorata",
+		"region_id": 3
 	},
 	{
-		"name": "Voinesti"
+		"name": "Voinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Lunca Corbului"
+		"name": "Lunca Corbului",
+		"region_id": 3
 	},
 	{
-		"name": "Bumbueni"
+		"name": "Bumbueni",
+		"region_id": 3
 	},
 	{
-		"name": "Catane"
+		"name": "Catane",
+		"region_id": 3
 	},
 	{
-		"name": "Ciesti"
+		"name": "Ciesti",
+		"region_id": 3
 	},
 	{
-		"name": "Langesti"
+		"name": "Langesti",
+		"region_id": 3
 	},
 	{
-		"name": "Marghia de Jos"
+		"name": "Marghia de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Marghia de Sus"
+		"name": "Marghia de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Padureti"
+		"name": "Padureti",
+		"region_id": 3
 	},
 	{
-		"name": "Silisteni"
+		"name": "Silisteni",
+		"region_id": 3
 	},
 	{
-		"name": "Malureni"
+		"name": "Malureni",
+		"region_id": 3
 	},
 	{
-		"name": "Bunesti"
+		"name": "Bunesti",
+		"region_id": 3
 	},
 	{
-		"name": "Pauleasca"
+		"name": "Pauleasca",
+		"region_id": 3
 	},
 	{
-		"name": "Toplita"
+		"name": "Toplita",
+		"region_id": 3
 	},
 	{
-		"name": "Zarnesti"
+		"name": "Zarnesti",
+		"region_id": 3
 	},
 	{
-		"name": "Merisani"
+		"name": "Merisani",
+		"region_id": 3
 	},
 	{
-		"name": "Borlesti"
+		"name": "Borlesti",
+		"region_id": 3
 	},
 	{
-		"name": "Brateasca"
+		"name": "Brateasca",
+		"region_id": 3
 	},
 	{
-		"name": "Capu Piscului"
+		"name": "Capu Piscului",
+		"region_id": 3
 	},
 	{
-		"name": "Crampotani"
+		"name": "Crampotani",
+		"region_id": 3
 	},
 	{
-		"name": "Dobrogostea"
+		"name": "Dobrogostea",
+		"region_id": 3
 	},
 	{
-		"name": "Malu Vanat"
+		"name": "Malu Vanat",
+		"region_id": 3
 	},
 	{
-		"name": "Varzaru"
+		"name": "Varzaru",
+		"region_id": 3
 	},
 	{
-		"name": "Valcelele"
+		"name": "Valcelele",
+		"region_id": 3
 	},
 	{
-		"name": "Micesti"
+		"name": "Micesti",
+		"region_id": 3
 	},
 	{
-		"name": "Branzari"
+		"name": "Branzari",
+		"region_id": 3
 	},
 	{
-		"name": "Pauleasca"
+		"name": "Pauleasca",
+		"region_id": 3
 	},
 	{
-		"name": "Purcareni"
+		"name": "Purcareni",
+		"region_id": 3
 	},
 	{
-		"name": "Mihaesti"
+		"name": "Mihaesti",
+		"region_id": 3
 	},
 	{
-		"name": "Draghici"
+		"name": "Draghici",
+		"region_id": 3
 	},
 	{
-		"name": "Furnicosi"
+		"name": "Furnicosi",
+		"region_id": 3
 	},
 	{
-		"name": "Rudeni"
+		"name": "Rudeni",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Bradului"
+		"name": "Valea Bradului",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Popii"
+		"name": "Valea Popii",
+		"region_id": 3
 	},
 	{
-		"name": "Vacarea"
+		"name": "Vacarea",
+		"region_id": 3
 	},
 	{
-		"name": "Matau"
+		"name": "Matau",
+		"region_id": 3
 	},
 	{
-		"name": "Alunis"
+		"name": "Alunis",
+		"region_id": 3
 	},
 	{
-		"name": "Chilii"
+		"name": "Chilii",
+		"region_id": 3
 	},
 	{
-		"name": "Cocenesti"
+		"name": "Cocenesti",
+		"region_id": 3
 	},
 	{
-		"name": "Suslanesti"
+		"name": "Suslanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Mirosi"
+		"name": "Mirosi",
+		"region_id": 3
 	},
 	{
-		"name": "Surdulesti"
+		"name": "Surdulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Moraresti"
+		"name": "Moraresti",
+		"region_id": 3
 	},
 	{
-		"name": "Dedulesti"
+		"name": "Dedulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Obejdeanului"
+		"name": "Dealu Obejdeanului",
+		"region_id": 3
 	},
 	{
-		"name": "Luminile"
+		"name": "Luminile",
+		"region_id": 3
 	},
 	{
-		"name": "Mancioiu"
+		"name": "Mancioiu",
+		"region_id": 3
 	},
 	{
-		"name": "Sapunari"
+		"name": "Sapunari",
+		"region_id": 3
 	},
 	{
-		"name": "Mosoaia"
+		"name": "Mosoaia",
+		"region_id": 3
 	},
 	{
-		"name": "Batrani"
+		"name": "Batrani",
+		"region_id": 3
 	},
 	{
-		"name": "Ciocanai"
+		"name": "Ciocanai",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Viilor"
+		"name": "Dealu Viilor",
+		"region_id": 3
 	},
 	{
-		"name": "Hintesti"
+		"name": "Hintesti",
+		"region_id": 3
 	},
 	{
-		"name": "Lazaresti"
+		"name": "Lazaresti",
+		"region_id": 3
 	},
 	{
-		"name": "Smeura"
+		"name": "Smeura",
+		"region_id": 3
 	},
 	{
-		"name": "Mozaceni"
+		"name": "Mozaceni",
+		"region_id": 3
 	},
 	{
-		"name": "Babaroaga"
+		"name": "Babaroaga",
+		"region_id": 3
 	},
 	{
-		"name": "Zidurile"
+		"name": "Zidurile",
+		"region_id": 3
 	},
 	{
-		"name": "Valsanesti"
+		"name": "Valsanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bolovanesti"
+		"name": "Bolovanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Costesti-Vaslan"
+		"name": "Costesti-Vaslan",
+		"region_id": 3
 	},
 	{
-		"name": "Musatesti"
+		"name": "Musatesti",
+		"region_id": 3
 	},
 	{
-		"name": "Prosia"
+		"name": "Prosia",
+		"region_id": 3
 	},
 	{
-		"name": "Robaia"
+		"name": "Robaia",
+		"region_id": 3
 	},
 	{
-		"name": "Stroesti"
+		"name": "Stroesti",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Faurului"
+		"name": "Valea Faurului",
+		"region_id": 3
 	},
 	{
-		"name": "Valea lui Mas"
+		"name": "Valea lui Mas",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Muscelului"
+		"name": "Valea Muscelului",
+		"region_id": 3
 	},
 	{
-		"name": "Negrasi"
+		"name": "Negrasi",
+		"region_id": 3
 	},
 	{
-		"name": "Barlogu"
+		"name": "Barlogu",
+		"region_id": 3
 	},
 	{
-		"name": "Buta"
+		"name": "Buta",
+		"region_id": 3
 	},
 	{
-		"name": "Mozacu"
+		"name": "Mozacu",
+		"region_id": 3
 	},
 	{
-		"name": "Nucsoara"
+		"name": "Nucsoara",
+		"region_id": 3
 	},
 	{
-		"name": "Gruiu"
+		"name": "Gruiu",
+		"region_id": 3
 	},
 	{
-		"name": "Sboghitesti"
+		"name": "Sboghitesti",
+		"region_id": 3
 	},
 	{
-		"name": "Slatina"
+		"name": "Slatina",
+		"region_id": 3
 	},
 	{
-		"name": "Oarja"
+		"name": "Oarja",
+		"region_id": 3
 	},
 	{
-		"name": "Ceausesti"
+		"name": "Ceausesti",
+		"region_id": 3
 	},
 	{
-		"name": "Pietrosani"
+		"name": "Pietrosani",
+		"region_id": 3
 	},
 	{
-		"name": "Badesti"
+		"name": "Badesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ganesti"
+		"name": "Ganesti",
+		"region_id": 3
 	},
 	{
-		"name": "Retevoiesti"
+		"name": "Retevoiesti",
+		"region_id": 3
 	},
 	{
-		"name": "Varzaroaia"
+		"name": "Varzaroaia",
+		"region_id": 3
 	},
 	{
-		"name": "Poienari"
+		"name": "Poienari",
+		"region_id": 3
 	},
 	{
-		"name": "Ceauresti"
+		"name": "Ceauresti",
+		"region_id": 3
 	},
 	{
-		"name": "Ioanicesti"
+		"name": "Ioanicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Tomulesti"
+		"name": "Tomulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Poienari"
+		"name": "Poienari",
+		"region_id": 3
 	},
 	{
-		"name": "Grosani"
+		"name": "Grosani",
+		"region_id": 3
 	},
 	{
-		"name": "Jugur"
+		"name": "Jugur",
+		"region_id": 3
 	},
 	{
-		"name": "Serbanesti"
+		"name": "Serbanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Indarat"
+		"name": "Valea Indarat",
+		"region_id": 3
 	},
 	{
-		"name": "Poiana Lacului"
+		"name": "Poiana Lacului",
+		"region_id": 3
 	},
 	{
-		"name": "Catunasi"
+		"name": "Catunasi",
+		"region_id": 3
 	},
 	{
-		"name": "Cepari"
+		"name": "Cepari",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Orasului"
+		"name": "Dealu Orasului",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Viilor"
+		"name": "Dealu Viilor",
+		"region_id": 3
 	},
 	{
-		"name": "Dinculesti"
+		"name": "Dinculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Galeteanu"
+		"name": "Galeteanu",
+		"region_id": 3
 	},
 	{
-		"name": "Gardinesti"
+		"name": "Gardinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Galcesti"
+		"name": "Galcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Metofu"
+		"name": "Metofu",
+		"region_id": 3
 	},
 	{
-		"name": "Paduroiu din Deal"
+		"name": "Paduroiu din Deal",
+		"region_id": 3
 	},
 	{
-		"name": "Paduroiu din Vale"
+		"name": "Paduroiu din Vale",
+		"region_id": 3
 	},
 	{
-		"name": "Samara"
+		"name": "Samara",
+		"region_id": 3
 	},
 	{
-		"name": "Popesti"
+		"name": "Popesti",
+		"region_id": 3
 	},
 	{
-		"name": "Adunati"
+		"name": "Adunati",
+		"region_id": 3
 	},
 	{
-		"name": "Bucov"
+		"name": "Bucov",
+		"region_id": 3
 	},
 	{
-		"name": "Palanga"
+		"name": "Palanga",
+		"region_id": 3
 	},
 	{
-		"name": "Purcareni"
+		"name": "Purcareni",
+		"region_id": 3
 	},
 	{
-		"name": "Raca"
+		"name": "Raca",
+		"region_id": 3
 	},
 	{
-		"name": "Slobozia"
+		"name": "Slobozia",
+		"region_id": 3
 	},
 	{
-		"name": "Priboieni"
+		"name": "Priboieni",
+		"region_id": 3
 	},
 	{
-		"name": "Albotele"
+		"name": "Albotele",
+		"region_id": 3
 	},
 	{
-		"name": "Paraschivesti"
+		"name": "Paraschivesti",
+		"region_id": 3
 	},
 	{
-		"name": "Samaila"
+		"name": "Samaila",
+		"region_id": 3
 	},
 	{
-		"name": "Pitoi"
+		"name": "Pitoi",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Mare"
+		"name": "Valea Mare",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Nenii"
+		"name": "Valea Nenii",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Popii"
+		"name": "Valea Popii",
+		"region_id": 3
 	},
 	{
-		"name": "Ratesti"
+		"name": "Ratesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ciupa-Manciulescu"
+		"name": "Ciupa-Manciulescu",
+		"region_id": 3
 	},
 	{
-		"name": "Furduesti"
+		"name": "Furduesti",
+		"region_id": 3
 	},
 	{
-		"name": "Mavrodolu"
+		"name": "Mavrodolu",
+		"region_id": 3
 	},
 	{
-		"name": "Nejlovelu"
+		"name": "Nejlovelu",
+		"region_id": 3
 	},
 	{
-		"name": "Patuleni"
+		"name": "Patuleni",
+		"region_id": 3
 	},
 	{
-		"name": "Tigveni"
+		"name": "Tigveni",
+		"region_id": 3
 	},
 	{
-		"name": "Recea"
+		"name": "Recea",
+		"region_id": 3
 	},
 	{
-		"name": "Deagu de Jos"
+		"name": "Deagu de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Deagu de Sus"
+		"name": "Deagu de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Goleasca"
+		"name": "Goleasca",
+		"region_id": 3
 	},
 	{
-		"name": "Orodel"
+		"name": "Orodel",
+		"region_id": 3
 	},
 	{
-		"name": "Rociu"
+		"name": "Rociu",
+		"region_id": 3
 	},
 	{
-		"name": "Gliganu de Jos"
+		"name": "Gliganu de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Gliganu de Sus"
+		"name": "Gliganu de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Serbanesti"
+		"name": "Serbanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Rucar"
+		"name": "Rucar",
+		"region_id": 3
 	},
 	{
-		"name": "Satic"
+		"name": "Satic",
+		"region_id": 3
 	},
 	{
-		"name": "Salatrucu"
+		"name": "Salatrucu",
+		"region_id": 3
 	},
 	{
-		"name": "Valeni"
+		"name": "Valeni",
+		"region_id": 3
 	},
 	{
-		"name": "Martesti"
+		"name": "Martesti",
+		"region_id": 3
 	},
 	{
-		"name": "Banaresti"
+		"name": "Banaresti",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Bradului"
+		"name": "Dealu Bradului",
+		"region_id": 3
 	},
 	{
-		"name": "Draghicesti"
+		"name": "Draghicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Gainusa"
+		"name": "Gainusa",
+		"region_id": 3
 	},
 	{
-		"name": "Lipia"
+		"name": "Lipia",
+		"region_id": 3
 	},
 	{
-		"name": "Popesti"
+		"name": "Popesti",
+		"region_id": 3
 	},
 	{
-		"name": "Turcesti"
+		"name": "Turcesti",
+		"region_id": 3
 	},
 	{
-		"name": "Schitu Golesti"
+		"name": "Schitu Golesti",
+		"region_id": 3
 	},
 	{
-		"name": "Burnesti"
+		"name": "Burnesti",
+		"region_id": 3
 	},
 	{
-		"name": "Costita"
+		"name": "Costita",
+		"region_id": 3
 	},
 	{
-		"name": "Lazaresti"
+		"name": "Lazaresti",
+		"region_id": 3
 	},
 	{
-		"name": "Loturi"
+		"name": "Loturi",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Pechii"
+		"name": "Valea Pechii",
+		"region_id": 3
 	},
 	{
-		"name": "Slobozia"
+		"name": "Slobozia",
+		"region_id": 3
 	},
 	{
-		"name": "Nigrisoara"
+		"name": "Nigrisoara",
+		"region_id": 3
 	},
 	{
-		"name": "Stalpeni"
+		"name": "Stalpeni",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Frumos"
+		"name": "Dealu Frumos",
+		"region_id": 3
 	},
 	{
-		"name": "Livezeni"
+		"name": "Livezeni",
+		"region_id": 3
 	},
 	{
-		"name": "Ogrezea"
+		"name": "Ogrezea",
+		"region_id": 3
 	},
 	{
-		"name": "Opresti"
+		"name": "Opresti",
+		"region_id": 3
 	},
 	{
-		"name": "Pitigaia"
+		"name": "Pitigaia",
+		"region_id": 3
 	},
 	{
-		"name": "Radesti"
+		"name": "Radesti",
+		"region_id": 3
 	},
 	{
-		"name": "Stoenesti"
+		"name": "Stoenesti",
+		"region_id": 3
 	},
 	{
-		"name": "Badeni"
+		"name": "Badeni",
+		"region_id": 3
 	},
 	{
-		"name": "Cotenesti"
+		"name": "Cotenesti",
+		"region_id": 3
 	},
 	{
-		"name": "Lunca Gartii"
+		"name": "Lunca Gartii",
+		"region_id": 3
 	},
 	{
-		"name": "Piatra"
+		"name": "Piatra",
+		"region_id": 3
 	},
 	{
-		"name": "Slobozia"
+		"name": "Slobozia",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Badenilor"
+		"name": "Valea Badenilor",
+		"region_id": 3
 	},
 	{
-		"name": "Stolnici"
+		"name": "Stolnici",
+		"region_id": 3
 	},
 	{
-		"name": "Cochinesti"
+		"name": "Cochinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cotmeana"
+		"name": "Cotmeana",
+		"region_id": 3
 	},
 	{
-		"name": "Falfani"
+		"name": "Falfani",
+		"region_id": 3
 	},
 	{
-		"name": "Izbasesti"
+		"name": "Izbasesti",
+		"region_id": 3
 	},
 	{
-		"name": "Vlascuta"
+		"name": "Vlascuta",
+		"region_id": 3
 	},
 	{
-		"name": "Suseni"
+		"name": "Suseni",
+		"region_id": 3
 	},
 	{
-		"name": "Burdesti"
+		"name": "Burdesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cersani"
+		"name": "Cersani",
+		"region_id": 3
 	},
 	{
-		"name": "Chiritesti"
+		"name": "Chiritesti",
+		"region_id": 3
 	},
 	{
-		"name": "Galesesti"
+		"name": "Galesesti",
+		"region_id": 3
 	},
 	{
-		"name": "Odaeni"
+		"name": "Odaeni",
+		"region_id": 3
 	},
 	{
-		"name": "Padureni"
+		"name": "Padureni",
+		"region_id": 3
 	},
 	{
-		"name": "Strambeni"
+		"name": "Strambeni",
+		"region_id": 3
 	},
 	{
-		"name": "Stefanesti"
+		"name": "Stefanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Tutulesti"
+		"name": "Tutulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Stefan cel Mare"
+		"name": "Stefan cel Mare",
+		"region_id": 3
 	},
 	{
-		"name": "Glavacioc"
+		"name": "Glavacioc",
+		"region_id": 3
 	},
 	{
-		"name": "Suici"
+		"name": "Suici",
+		"region_id": 3
 	},
 	{
-		"name": "Ianculesti"
+		"name": "Ianculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Paltenu"
+		"name": "Paltenu",
+		"region_id": 3
 	},
 	{
-		"name": "Pauleni"
+		"name": "Pauleni",
+		"region_id": 3
 	},
 	{
-		"name": "Rudeni"
+		"name": "Rudeni",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Calului"
+		"name": "Valea Calului",
+		"region_id": 3
 	},
 	{
-		"name": "Teiu"
+		"name": "Teiu",
+		"region_id": 3
 	},
 	{
-		"name": "Lesile"
+		"name": "Lesile",
+		"region_id": 3
 	},
 	{
-		"name": "Tigveni"
+		"name": "Tigveni",
+		"region_id": 3
 	},
 	{
-		"name": "Badislava"
+		"name": "Badislava",
+		"region_id": 3
 	},
 	{
-		"name": "Balilesti"
+		"name": "Balilesti",
+		"region_id": 3
 	},
 	{
-		"name": "Balteni"
+		"name": "Balteni",
+		"region_id": 3
 	},
 	{
-		"name": "Barsestii de Jos"
+		"name": "Barsestii de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Barsestii de Sus"
+		"name": "Barsestii de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Blaju"
+		"name": "Blaju",
+		"region_id": 3
 	},
 	{
-		"name": "Vladesti"
+		"name": "Vladesti",
+		"region_id": 3
 	},
 	{
-		"name": "Titesti"
+		"name": "Titesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bucsenesti-Lotasi"
+		"name": "Bucsenesti-Lotasi",
+		"region_id": 3
 	},
 	{
-		"name": "Cismea"
+		"name": "Cismea",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Manastirii"
+		"name": "Valea Manastirii",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Stanii"
+		"name": "Valea Stanii",
+		"region_id": 3
 	},
 	{
-		"name": "Uda"
+		"name": "Uda",
+		"region_id": 3
 	},
 	{
-		"name": "Badulesti"
+		"name": "Badulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Baranesti"
+		"name": "Baranesti",
+		"region_id": 3
 	},
 	{
-		"name": "Branistea"
+		"name": "Branistea",
+		"region_id": 3
 	},
 	{
-		"name": "Chiritesti"
+		"name": "Chiritesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cotu"
+		"name": "Cotu",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Bisericii"
+		"name": "Dealu Bisericii",
+		"region_id": 3
 	},
 	{
-		"name": "Dealu Tolcesii"
+		"name": "Dealu Tolcesii",
+		"region_id": 3
 	},
 	{
-		"name": "Diconesti"
+		"name": "Diconesti",
+		"region_id": 3
 	},
 	{
-		"name": "Gorani"
+		"name": "Gorani",
+		"region_id": 3
 	},
 	{
-		"name": "Greaban"
+		"name": "Greaban",
+		"region_id": 3
 	},
 	{
-		"name": "Lungulesti"
+		"name": "Lungulesti",
+		"region_id": 3
 	},
 	{
-		"name": "Miercani"
+		"name": "Miercani",
+		"region_id": 3
 	},
 	{
-		"name": "Rajletu-Govora"
+		"name": "Rajletu-Govora",
+		"region_id": 3
 	},
 	{
-		"name": "Romana"
+		"name": "Romana",
+		"region_id": 3
 	},
 	{
-		"name": "Salistea"
+		"name": "Salistea",
+		"region_id": 3
 	},
 	{
-		"name": "Ungheni"
+		"name": "Ungheni",
+		"region_id": 3
 	},
 	{
-		"name": "Coltu"
+		"name": "Coltu",
+		"region_id": 3
 	},
 	{
-		"name": "Gaujani"
+		"name": "Gaujani",
+		"region_id": 3
 	},
 	{
-		"name": "Goia"
+		"name": "Goia",
+		"region_id": 3
 	},
 	{
-		"name": "Humele"
+		"name": "Humele",
+		"region_id": 3
 	},
 	{
-		"name": "Satu Nou"
+		"name": "Satu Nou",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Danului"
+		"name": "Valea Danului",
+		"region_id": 3
 	},
 	{
-		"name": "Banicesti"
+		"name": "Banicesti",
+		"region_id": 3
 	},
 	{
-		"name": "Bolculesti"
+		"name": "Bolculesti",
+		"region_id": 3
 	},
 	{
-		"name": "Borobanesti"
+		"name": "Borobanesti",
+		"region_id": 3
 	},
 	{
-		"name": "Vernesti"
+		"name": "Vernesti",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Iasului"
+		"name": "Valea Iasului",
+		"region_id": 3
 	},
 	{
-		"name": "Badila"
+		"name": "Badila",
+		"region_id": 3
 	},
 	{
-		"name": "Barbalatesti"
+		"name": "Barbalatesti",
+		"region_id": 3
 	},
 	{
-		"name": "Borovinesti"
+		"name": "Borovinesti",
+		"region_id": 3
 	},
 	{
-		"name": "Cerbureni"
+		"name": "Cerbureni",
+		"region_id": 3
 	},
 	{
-		"name": "Mustatesti"
+		"name": "Mustatesti",
+		"region_id": 3
 	},
 	{
-		"name": "Ruginoasa"
+		"name": "Ruginoasa",
+		"region_id": 3
 	},
 	{
-		"name": "Ungureni"
+		"name": "Ungureni",
+		"region_id": 3
 	},
 	{
-		"name": "Valea Uleiului"
+		"name": "Valea Uleiului",
+		"region_id": 3
 	},
 	{
-		"name": "Vedea"
+		"name": "Vedea",
+		"region_id": 3
 	},
 	{
-		"name": "Badicea"
+		"name": "Badicea",
+		"region_id": 3
 	},
 	{
-		"name": "Blejani"
+		"name": "Blejani",
+		"region_id": 3
 	},
 	{
-		"name": "Buretesti"
+		"name": "Buretesti",
+		"region_id": 3
 	},
 	{
-		"name": "Chiritesti"
+		"name": "Chiritesti",
+		"region_id": 3
 	},
 	{
-		"name": "Chitani"
+		"name": "Chitani",
+		"region_id": 3
 	},
 	{
-		"name": "Ciuresti"
+		"name": "Ciuresti",
+		"region_id": 3
 	},
 	{
-		"name": "Dincani"
+		"name": "Dincani",
+		"region_id": 3
 	},
 	{
-		"name": "Fata"
+		"name": "Fata",
+		"region_id": 3
 	},
 	{
-		"name": "Fratici"
+		"name": "Fratici",
+		"region_id": 3
 	},
 	{
-		"name": "Izvoru de Jos"
+		"name": "Izvoru de Jos",
+		"region_id": 3
 	},
 	{
-		"name": "Izvoru de Sus"
+		"name": "Izvoru de Sus",
+		"region_id": 3
 	},
 	{
-		"name": "Lungani"
+		"name": "Lungani",
+		"region_id": 3
 	},
 	{
-		"name": "Mogosesti"
+		"name": "Mogosesti",
+		"region_id": 3
 	},
 	{
-		"name": "Prodani"
+		"name": "Prodani",
+		"region_id": 3
 	},
 	{
-		"name": "Ratoi"
+		"name": "Ratoi",
+		"region_id": 3
 	},
 	{
-		"name": "Vata"
+		"name": "Vata",
+		"region_id": 3
 	},
 	{
-		"name": "Vetisoara"
+		"name": "Vetisoara",
+		"region_id": 3
 	},
 	{
-		"name": "Varsesti"
+		"name": "Varsesti",
+		"region_id": 3
 	},
 	{
-		"name": "Vladesti"
+		"name": "Vladesti",
+		"region_id": 3
 	},
 	{
-		"name": "Coteasca"
+		"name": "Coteasca",
+		"region_id": 3
 	},
 	{
-		"name": "Draghescu"
+		"name": "Draghescu",
+		"region_id": 3
 	},
 	{
-		"name": "Putina"
+		"name": "Putina",
+		"region_id": 3
 	}
 ]

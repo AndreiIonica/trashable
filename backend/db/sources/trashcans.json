@@ -2438,5 +2438,21 @@
 		"user_id": 1,
 		"type_id": 1,
 		"city_id": 1
+	},
+	{
+		"latitude": 44.8412,
+		"longitude": 24.8808,
+		"street_address": "Războieni, Parcare",
+		"user_id": 1,
+		"type_id": 5,
+		"city_id": 1
+	},
+	{
+		"latitude": 44.8711,
+		"longitude": 24.8522,
+		"street_address": "Pitesti",
+		"user_id": 1,
+		"type_id": 5,
+		"city_id": 1
 	}
 ]

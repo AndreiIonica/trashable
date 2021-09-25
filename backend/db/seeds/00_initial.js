@@ -5,31 +5,9 @@ require('dotenv').config();
 const fs = require('fs');
 
 const tableNames = require('../../src/constants/tableNames.json');
-const judete = require('../sources/regions.json');
-const oraseJSON = require('../sources/cities.json');
-const types = require('../sources/type.json');
-
-const citySeed = async (knex) => {
-	const cities = [];
-	// Get the id of Arges region
-	const { id } = await knex(tableNames.region)
-		.select('id')
-		.where('code', 'AG')
-		.first();
-	// JS fuckery to do it in parallel
-	// Explanation: map returns a new array with the return of the function applied to every element
-	// the async function returns a promise and we put that into
-	// Promise.all so it is done in parallel
-	await Promise.all(
-		oraseJSON.map(async (oras) => {
-			cities.push({
-				name: oras.name,
-				region_id: id
-			});
-		})
-	);
-	await knex(tableNames.city).insert(cities);
-};
+const regionSource = require('../sources/regions.json');
+const citySource = require('../sources/cities.json');
+const typesSource = require('../sources/type.json');
 
 const userSeed = async (knex) => {
 	const user = {
@@ -51,13 +29,13 @@ exports.seed = async (knex) => {
 	await Promise.all(Object.keys(tableNames).map((name) => knex(name).del()));
 
 	// COUNTIES SEED
-	await knex(tableNames.region).insert(judete);
+	await knex(tableNames.region).insert(regionSource);
 
 	// CITIES SEED
-	await citySeed(knex);
+	await knex(tableNames.city).insert(citySource);
 
 	// TRASHCAN_TYPE SEED
-	await knex(tableNames.trashcan_type).insert(types);
+	await knex(tableNames.trashcan_type).insert(typesSource);
 	/* ********************************************************* */
 
 	// USERS SEED

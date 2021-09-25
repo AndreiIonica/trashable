@@ -42,15 +42,11 @@ exports.up = async (knex) => {
 		// https://gis.stackexchange.com/questions/8650/measuring-accuracy-of-latitude-and-longitude
 		table.decimal('latitude', 7, 4).notNullable();
 		table.decimal('longitude', 7, 4).notNullable();
-		table.string('street_address', 255).notNullable();
+		table.string('street_address', 255);
 
-		table.integer('altitude', 5);
 		reference(table, 'type_id', tableNames.trashcan_type);
 		reference(table, 'city_id', tableNames.city);
 		reference(table, 'user_id', tableNames.user);
-
-		table.boolean('clean');
-		table.string('photo_url', 2000);
 
 		table.unique(['latitude', 'longitude']);
 

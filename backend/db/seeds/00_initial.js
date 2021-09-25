@@ -5,7 +5,7 @@ require('dotenv').config();
 const fs = require('fs');
 
 const tableNames = require('../../src/constants/tableNames.json');
-const judete = require('../sources/counties.json');
+const judete = require('../sources/regions.json');
 const oraseJSON = require('../sources/cities.json');
 const types = require('../sources/type.json');
 

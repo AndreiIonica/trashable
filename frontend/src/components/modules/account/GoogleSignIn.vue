@@ -32,6 +32,6 @@ import GoogleLogo from '@/components/icons/GoogleLogo.vue';
 }
 
 #icon {
-	height: 85%;
+	height: 80%;
 }
 </style>

@@ -11,8 +11,8 @@ import ReturnIcon from '@/components/icons/ReturnIcon.vue';
 
 <style scoped>
 button {
-	width: 4em;
-	height: 3em;
+	width: 4rem;
+	height: 3rem;
 }
 
 #icon {

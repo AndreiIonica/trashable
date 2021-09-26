@@ -21,7 +21,7 @@ const props = defineProps<IMenuItemProps>();
 
 <style scoped>
 button {
-	width: 5em;
+	width: 5rem;
 	background-color: transparent;
 	/* background: var(--accent-color); */
 

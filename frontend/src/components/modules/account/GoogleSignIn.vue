@@ -22,12 +22,12 @@ import GoogleLogo from '@/components/icons/GoogleLogo.vue';
 	justify-content: space-evenly;
 	align-items: center;
 
-	padding: 0.25em 0.5em;
+	padding: 0.25rem 0.5rem;
 
 	background: #ffffff;
 	color: var(--secondary-text);
 
-	border-radius: 4em;
+	border-radius: 4rem;
 	border: 0;
 }
 

@@ -12,7 +12,7 @@ import MenuIcon from '@/components/icons/HamburgerMenu.vue';
 <style scoped>
 #container {
 	height: 3rem;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 
 	display: flex;
 	flex-direction: row;
@@ -24,7 +24,7 @@ import MenuIcon from '@/components/icons/HamburgerMenu.vue';
 	background: var(--accent-color);
 	color: var(--text-color);
 
-	border-radius: 4em;
+	border-radius: 4rem;
 	border: 0;
 }
 

@@ -31,7 +31,7 @@ button {
 	color: var(--text-color);
 
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 
 	font-size: 1.1rem;
@@ -43,7 +43,7 @@ button {
 }
 
 .icon {
-	width: 1rem;
-	height: 1rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 </style>

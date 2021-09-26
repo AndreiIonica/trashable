@@ -1,15 +1,21 @@
 <template>
 	<div id="menu">
-		<p>MENU</p>
+		<p>MENIU</p>
 
 		<div id="items-container">
 			<ClosestMenuItem
-				v-for="(t, i) in items"
+				v-for="(t, i) in props.pins"
 				:key="i"
 				:distance="t.distance"
 				:markerColor="t.markerColor"
 				class="item-child"
 			/>
+			<ClosestRecyclingCenter
+				:distance="props.recyclingCenter.distance"
+				:markerColor="props.recyclingCenter.markerColor"
+				class="item-child"
+			/>
+			<ReturnButton />
 		</div>
 	</div>
 </template>
@@ -17,6 +23,8 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
 import ClosestMenuItem from '@/components/modules/map/ClosestMenuItem.vue';
+import ClosestRecyclingCenter from '@/components/modules/map/ClosestRecyclingCenter.vue';
+import ReturnButton from '@/components/ui/ReturnButton.vue';
 
 interface IMenuItem {
 	markerColor: string;
@@ -24,12 +32,11 @@ interface IMenuItem {
 }
 
 interface IMenuProps {
-	items: IMenuItem[];
+	pins: IMenuItem[];
+	recyclingCenter: IMenuItem;
 }
 
 const props = defineProps<IMenuProps>();
-
-const items = props.items ?? [];
 </script>
 
 <style scoped>
@@ -41,7 +48,7 @@ const items = props.items ?? [];
 	color: var(--text-color);
 
 	border: 0;
-	border-radius: 4rem;
+	border-radius: 2rem;
 }
 
 #items-container {
@@ -55,6 +62,7 @@ const items = props.items ?? [];
 p {
 	text-align: center;
 	margin: 0;
+	font-size: 1.2rem;
 }
 
 .item-child {

@@ -15,7 +15,7 @@ const Template = args => ({
 
 export const Menu = Template.bind({});
 Menu.args = {
-	items: [
+	pins: [
 		{
 			markerColor: '#CB2B3E',
 			distance: '5 m',
@@ -33,4 +33,8 @@ Menu.args = {
 			distance: '8 m',
 		},
 	],
+	recyclingCenter: {
+		markerColor: '#FFFFFF',
+		distance: '8 m',
+	},
 };

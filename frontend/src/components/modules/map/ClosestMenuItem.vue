@@ -1,13 +1,14 @@
 <template>
 	<button>
-		<MarkerIcon class="icon fill" />
+		<div class="icon fill">
+			<slot></slot>
+		</div>
 		{{ props.distance }}
 		<FocusIcon class="icon" />
 	</button>
 </template>
 
 <script lang="ts" setup>
-import MarkerIcon from '@/components/icons/MarkerIcon.vue';
 import FocusIcon from '@/components/icons/FocusIcon.vue';
 import { defineProps } from 'vue';
 

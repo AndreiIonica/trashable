@@ -9,12 +9,16 @@
 				:distance="t.distance"
 				:markerColor="t.markerColor"
 				class="item-child"
-			/>
-			<ClosestRecyclingCenter
+			>
+				<MarkerIcon />
+			</ClosestMenuItem>
+			<ClosestMenuItem
 				:distance="props.recyclingCenter.distance"
 				:markerColor="props.recyclingCenter.markerColor"
 				class="item-child"
-			/>
+			>
+				<RecyclingCenterIcon />
+			</ClosestMenuItem>
 			<ReturnButton />
 		</div>
 	</div>
@@ -23,8 +27,9 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
 import ClosestMenuItem from '@/components/modules/map/ClosestMenuItem.vue';
-import ClosestRecyclingCenter from '@/components/modules/map/ClosestRecyclingCenter.vue';
+import MarkerIcon from '@/components/icons/MarkerIcon.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
+import RecyclingCenterIcon from '@/components/icons/RecyclingCenterIcon.vue';
 
 interface IMenuItem {
 	markerColor: string;

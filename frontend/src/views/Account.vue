@@ -3,7 +3,6 @@
 		<div id="logo">
 			<TrashableLogo></TrashableLogo>
 		</div>
-
 		<p id="title">TRASHABLE</p>
 		<GoogleSignIn class="button-login"></GoogleSignIn>
 		<DiscordSignIn class="button-login"></DiscordSignIn>
@@ -27,7 +26,8 @@ import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 	margin: 2.5%;
 }
 #main-container {
-	background-color: green;
+	background-image: url('~@/assets/raw/gradient.svg');
+
 	width: 100%;
 	height: 100%;
 

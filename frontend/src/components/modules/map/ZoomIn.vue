@@ -13,9 +13,9 @@ button {
 	justify-content: center;
 	align-items: center;
 
-	width: 2em;
-	height: 2em;
-	font-size: 1.2em;
+	width: 2rem;
+	height: 2rem;
+	font-size: 1.2rem;
 
 	background: var(--accent-color);
 	color: var(--text-color);

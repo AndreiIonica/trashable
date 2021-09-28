@@ -11,16 +11,16 @@ import { defineProps } from 'vue';
 
 const sizeNames = {
 	large: {
-		padding: '1em 2em',
-		textSize: '1.2em',
+		padding: '1rem 2rem',
+		textSize: '1.2rem',
 	},
 	normal: {
-		padding: '0.5em 1em',
-		textSize: '1em',
+		padding: '0.5rem 1rem',
+		textSize: '1rem',
 	},
 	small: {
-		padding: '0.25em 0.5em',
-		textSize: '0.75em',
+		padding: '0.25rem 0.5rem',
+		textSize: '0.75rem',
 	},
 };
 
@@ -46,7 +46,7 @@ button {
 	color: var(--text-color);
 	font-size: v-bind('sizeNames[size].textSize');
 
-	border-radius: 4em;
+	border-radius: 4rem;
 	border: 0;
 }
 </style>

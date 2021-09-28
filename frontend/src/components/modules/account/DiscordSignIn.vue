@@ -22,12 +22,12 @@ import DiscordLogo from '@/components/icons/DiscordLogo.vue';
 	justify-content: space-evenly;
 	align-items: center;
 
-	padding: 0.25em 0.5em;
+	padding: 0.25rem 0.5rem;
 
 	background: #5865f2;
 	color: var(--text-color);
 
-	border-radius: 4em;
+	border-radius: 4rem;
 	border: 0;
 }
 

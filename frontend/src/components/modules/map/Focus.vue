@@ -17,8 +17,8 @@ button {
 
 	/* Weird values,i dont know why
 	but this way it's the same size as the other buttons */
-	width: 2.88em;
-	height: 2.88em;
+	width: 2rem;
+	height: 2rem;
 
 	background: var(--accent-color);
 

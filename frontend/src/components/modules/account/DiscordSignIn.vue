@@ -14,9 +14,6 @@ import DiscordLogo from '@/components/icons/DiscordLogo.vue';
 
 <style scoped>
 #container {
-	height: 3rem;
-	width: 20rem;
-
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;

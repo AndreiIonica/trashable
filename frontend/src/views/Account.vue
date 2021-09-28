@@ -1,6 +1,10 @@
 <template>
 	<div id="main-container">
-		<p id="the-title">TRASHABLE</p>
+		<div id="logo">
+			<TrashableLogo></TrashableLogo>
+		</div>
+
+		<p id="title">TRASHABLE</p>
 		<GoogleSignIn class="button-login"></GoogleSignIn>
 		<DiscordSignIn class="button-login"></DiscordSignIn>
 		<Button size="normal" id="to-site">Catre site</Button>
@@ -13,6 +17,7 @@ import DiscordSignIn from '@/components/modules/account/DiscordSignIn.vue';
 import GoogleSignIn from '@/components/modules/account/GoogleSignIn.vue';
 import Button from '@/components/ui/Button.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
+import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 </script>
 
 <style scoped>
@@ -37,10 +42,13 @@ import ReturnButton from '@/components/ui/ReturnButton.vue';
 	margin-top: 5%;
 	margin-bottom: 2.5%;
 }
-#the-title {
+#title {
 	margin: 2.5%;
 	color: var(--text-color);
 	font-size: 2rem;
 	letter-spacing: 0.12em;
+}
+#logo {
+	width: 25%;
 }
 </style>

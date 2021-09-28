@@ -1,9 +1,12 @@
 <template>
 	<div id="main-container">
-		<div id="logo">
+		<div class="logo">
 			<TrashableLogo></TrashableLogo>
 		</div>
 		<p id="title">TRASHABLE</p>
+		<div id="user-logo" class="logo">
+			<UserLogo></UserLogo>
+		</div>
 		<GoogleSignIn class="button-login"></GoogleSignIn>
 		<DiscordSignIn class="button-login"></DiscordSignIn>
 		<Button size="normal" id="to-site">Catre site</Button>
@@ -17,6 +20,7 @@ import GoogleSignIn from '@/components/modules/account/GoogleSignIn.vue';
 import Button from '@/components/ui/Button.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
 import TrashableLogo from '@/components/icons/TrashableLogo.vue';
+import UserLogo from '@/components/icons/UserLogo.vue';
 </script>
 
 <style scoped>
@@ -48,7 +52,12 @@ import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 	font-size: 2rem;
 	letter-spacing: 0.12em;
 }
-#logo {
+.logo {
 	width: 25%;
+	margin: 5%;
+}
+#user-logo {
+	fill: #ffffff;
+	margin-top: 8%;
 }
 </style>

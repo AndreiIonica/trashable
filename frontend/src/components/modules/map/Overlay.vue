@@ -1,16 +1,16 @@
 <template>
 	<div class="overlay-container">
-		<TopMenu id="top-menu" />
+		<TopMenu id="top-menu" class="clickable" />
 
-		<div class="controls-container">
+		<div class="controls-container clickable">
 			<div id="menus-container">
-				<RecyclingCenter id="closest-button" />
-				<Button id="closest-menu">IN APROPIERE</Button>
+				<RecyclingCenter id="closest-button" class="clickable" />
+				<Button id="closest-menu" class="">IN APROPIERE</Button>
 			</div>
 			<div>
-				<Focus class="control-map" />
-				<ZoomIn class="control-map" />
-				<ZoomOut class="control-map" />
+				<Focus class="control-map clickable" />
+				<ZoomIn class="control-map clickable" />
+				<ZoomOut class="control-map clickable" />
 			</div>
 		</div>
 	</div>
@@ -44,14 +44,16 @@ import Button from '@/components/ui/Button.vue';
 #menus-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: end;
+	justify-content: flex-end;
+}
+.clickable {
+	pointer-events: auto;
 }
 .control-map {
 	margin: 2%;
 	height: 3rem;
 	margin-left: auto;
 	width: 3rem;
-	/* max-height: 3rem; */
 }
 
 .controls-container {
@@ -61,6 +63,7 @@ import Button from '@/components/ui/Button.vue';
 	grid-template-rows: 1fr;
 }
 .overlay-container {
+	pointer-events: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

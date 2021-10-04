@@ -1,7 +1,7 @@
 <template>
 	<div id="main-container">
 		<div id="mapid"></div>
-		<Overlay id="overlay" />
+		<Overlay id="overlay" @zoom-in="handleZoomIn" @zoom-out="handleZoomOut" />
 	</div>
 </template>
 
@@ -10,21 +10,58 @@ import Overlay from '@/components/modules/map/Overlay.vue';
 
 import { onMounted } from 'vue';
 import 'leaflet/dist/leaflet.css';
-import { Map, map as createMap, tileLayer } from 'leaflet';
+import {
+	Map,
+	map as createMap,
+	tileLayer,
+	LatLngExpression,
+	marker as Marker,
+	Marker as IMarker,
+	divIcon as DivIcon,
+} from 'leaflet';
+
+import userIconSvg from '@/assets/raw/UserIcon';
+
+// Coords Pitesti
+const STARTING_COORDS: LatLngExpression = [44.8478554, 24.8641281];
 
 let map: Map;
 
-function setupMap() {
+const UserIcon = DivIcon({
+	className: 'user-icon-map',
+	html: userIconSvg,
+});
+
+let UserMarker: IMarker;
+
+// eslint-disable-next-line no-undef
+function updateUserLocation(pos: GeolocationPosition): void {
+	console.log(pos);
+
+	UserMarker = Marker([pos.coords.latitude, pos.coords.longitude], {
+		icon: UserIcon,
+	});
+	UserMarker.addTo(map);
+}
+
+if (navigator.geolocation) navigator.geolocation.getCurrentPosition(updateUserLocation);
+
+onMounted(() => {
 	map = createMap('mapid', {
 		zoomControl: false,
-		maxZoom: 20,
 		attributionControl: false,
-	}).setView([0, 0], 9);
+	}).setView(STARTING_COORDS, 13);
 	tileLayer(
 		'https://api.mapbox.com/styles/v1/trashable/cku74yqsr47gh18p3lghm3n69/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJhc2hhYmxlIiwiYSI6ImNrcjdvM2V6bjNxbWQzMXFwc2lsYjRkY3UifQ.LPWo7d8sFng4vCAzoWHjNA ',
 	).addTo(map);
+});
+
+function handleZoomIn() {
+	map.zoomIn();
 }
-onMounted(setupMap);
+function handleZoomOut() {
+	map.zoomOut();
+}
 </script>
 
 <style scoped>

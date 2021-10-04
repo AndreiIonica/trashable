@@ -16,5 +16,6 @@ module.exports = {
 		'no-shadow': 0,
 		'@typescript-eslint/no-shadow': ['error'],
 		'import/order': 0,
+		'object-curly-newline': 0,
 	},
 };

@@ -8,21 +8,31 @@
 				<Button id="closest-menu" class="">IN APROPIERE</Button>
 			</div>
 			<div>
-				<Focus class="control-map clickable" />
-				<ZoomIn class="control-map clickable" />
-				<ZoomOut class="control-map clickable" />
+				<Focus class="control-map clickable" @click="emit('focusMap')" />
+				<ZoomIn class="control-map clickable" @click="emit('zoomIn')" />
+				<ZoomOut class="control-map clickable" @click="emit('zoomOut')" />
 			</div>
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
+import { defineEmits } from 'vue';
+
 import TopMenu from './TopMenu.vue';
 import Focus from './Focus.vue';
 import ZoomIn from './ZoomIn.vue';
 import ZoomOut from './ZoomOut.vue';
 import RecyclingCenter from './RecyclingCenter.vue';
 import Button from '@/components/ui/Button.vue';
+
+interface IOverlayEmits {
+	(e: 'zoomIn'): void;
+	(e: 'zoomOut'): void;
+	(e: 'focusMap'): void;
+}
+
+const emit = defineEmits<IOverlayEmits>();
 </script>
 
 <style scoped>

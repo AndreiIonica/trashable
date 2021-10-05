@@ -3,19 +3,18 @@ module.exports = {
 	env: {
 		node: true,
 	},
-	extends: ['plugin:vue/essential', '@vue/airbnb'],
+	extends: ['plugin:vue/vue3-essential', '@vue/airbnb', '@vue/typescript/recommended'],
 	parserOptions: {
-		parser: 'babel-eslint',
+		ecmaVersion: 2020,
 	},
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-		// Using alerts to notify the user
-		'no-alert': 0,
-		// Airbnb is strange with import rules
-		import: 0,
-		// switch to tabs
-		indent: ['error', 'tab'],
 		'no-tabs': 0,
+		indent: ['error', 'tab'],
+		'arrow-parens': 0,
+		'no-shadow': 0,
+		'@typescript-eslint/no-shadow': ['error'],
+		'import/order': 0,
 	},
 };

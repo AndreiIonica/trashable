@@ -4,7 +4,7 @@
 
 		<div class="controls-container clickable">
 			<div id="menus-container">
-				<RecyclingCenter id="closest-button" class="clickable" />
+				<RecyclingCenter id="closest-button" class="clickable" @click="emit('closest', 'all')" />
 				<Button id="closest-menu" class="">IN APROPIERE</Button>
 			</div>
 			<div>
@@ -30,6 +30,7 @@ interface IOverlayEmits {
 	(e: 'zoomIn'): void;
 	(e: 'zoomOut'): void;
 	(e: 'focusMap'): void;
+	(e: 'closest', id: number | 'all'): void;
 }
 
 const emit = defineEmits<IOverlayEmits>();

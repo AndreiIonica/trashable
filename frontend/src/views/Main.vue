@@ -6,12 +6,16 @@
 			@zoom-in="handleZoomIn"
 			@zoom-out="handleZoomOut"
 			@focus-map="handleFocus"
+			@closest="handleClosest"
 		/>
 	</div>
 </template>
 
 <script lang="ts" setup>
 import Overlay from '@/components/modules/map/Overlay.vue';
+import userIconSVG from '@/assets/raw/UserIcon';
+import { rawSVG as markerIconSvg } from '@/assets/raw/Marker';
+import markerColors from '@/assets/raw/MarkerColors';
 
 import { onMounted } from 'vue';
 import 'leaflet/dist/leaflet.css';
@@ -20,29 +24,63 @@ import {
 	map as createMap,
 	tileLayer,
 	LatLngExpression,
+	Marker as IMarker,
 	marker as Marker,
+	DivIcon as IDivIcon,
 	divIcon as DivIcon,
 } from 'leaflet';
+import { Trashcan } from '@trashable/hydrogen';
 
-import userIconSvg from '@/assets/raw/UserIcon';
-
+let map: Map;
 // Coords Pitesti
 const STARTING_COORDS: LatLngExpression = [44.8478554, 24.8641281];
 
-let map: Map;
-
 const UserIcon = DivIcon({
 	className: 'user-icon-map',
-	html: userIconSvg,
+	html: userIconSVG,
+});
+
+const MarkerIcons: IDivIcon[] = [];
+markerColors.forEach(c => {
+	MarkerIcons.push(
+		DivIcon({
+			className: 'mark',
+			html: markerIconSvg.replace('#000000', c),
+		}),
+	);
 });
 
 const UserMarker = Marker(STARTING_COORDS, {
 	icon: UserIcon,
 });
+const TrashcanMarkers: IMarker[] = [];
+
+let Trashcans: Trashcan.Trashcan[];
+
+Trashcan.GetAll()
+	.then(t => {
+		Trashcans = t;
+		Trashcans.forEach(trashcan => {
+			// Make new Marker
+			const m = Marker([trashcan.latitude, trashcan.longitude], {
+				icon: MarkerIcons[trashcan.type_id],
+			});
+
+			TrashcanMarkers.push(m);
+			m.addTo(map);
+		});
+	})
+	.catch(err => {
+		console.error(err);
+		// FIXME: find another way to error, for now will just alert
+		// eslint-disable-next-line no-alert
+		alert(
+			'Momentan Trashable intampina probleme.Incercati mai tarziu sau contactati un administrator!',
+		);
+	});
 
 // eslint-disable-next-line no-undef
 function updateUserLocation(pos: GeolocationPosition): void {
-	console.log(pos);
 	UserMarker.setLatLng([pos.coords.latitude, pos.coords.longitude]);
 
 	UserMarker.addTo(map);
@@ -60,6 +98,10 @@ onMounted(() => {
 	).addTo(map);
 	UserMarker.addTo(map);
 });
+
+function handleClosest(id: number | 'all') {
+	console.log(id);
+}
 
 function handleZoomIn() {
 	map.zoomIn();

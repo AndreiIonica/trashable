@@ -15,7 +15,8 @@
 		"leaflet": "^1.7.1",
 		"vue": "^3.0.0",
 		"vue-router": "^4.0.0-0",
-		"vuex": "^4.0.0-0"
+		"vuex": "^4.0.0-0",
+		"@trashable/hydrogen": "*"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.15.5",

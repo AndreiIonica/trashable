@@ -1,7 +1,12 @@
 <template>
 	<div id="main-container">
 		<div id="mapid"></div>
-		<Overlay id="overlay" @zoom-in="handleZoomIn" @zoom-out="handleZoomOut" />
+		<Overlay
+			id="overlay"
+			@zoom-in="handleZoomIn"
+			@zoom-out="handleZoomOut"
+			@focus-map="handleFocus"
+		/>
 	</div>
 </template>
 
@@ -16,7 +21,6 @@ import {
 	tileLayer,
 	LatLngExpression,
 	marker as Marker,
-	Marker as IMarker,
 	divIcon as DivIcon,
 } from 'leaflet';
 
@@ -32,19 +36,19 @@ const UserIcon = DivIcon({
 	html: userIconSvg,
 });
 
-let UserMarker: IMarker;
+const UserMarker = Marker(STARTING_COORDS, {
+	icon: UserIcon,
+});
 
 // eslint-disable-next-line no-undef
 function updateUserLocation(pos: GeolocationPosition): void {
 	console.log(pos);
+	UserMarker.setLatLng([pos.coords.latitude, pos.coords.longitude]);
 
-	UserMarker = Marker([pos.coords.latitude, pos.coords.longitude], {
-		icon: UserIcon,
-	});
 	UserMarker.addTo(map);
 }
 
-if (navigator.geolocation) navigator.geolocation.getCurrentPosition(updateUserLocation);
+if (navigator.geolocation) navigator.geolocation.watchPosition(updateUserLocation);
 
 onMounted(() => {
 	map = createMap('mapid', {
@@ -54,6 +58,7 @@ onMounted(() => {
 	tileLayer(
 		'https://api.mapbox.com/styles/v1/trashable/cku74yqsr47gh18p3lghm3n69/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJhc2hhYmxlIiwiYSI6ImNrcjdvM2V6bjNxbWQzMXFwc2lsYjRkY3UifQ.LPWo7d8sFng4vCAzoWHjNA ',
 	).addTo(map);
+	UserMarker.addTo(map);
 });
 
 function handleZoomIn() {
@@ -61,6 +66,10 @@ function handleZoomIn() {
 }
 function handleZoomOut() {
 	map.zoomOut();
+}
+function handleFocus() {
+	const { lat, lng } = UserMarker.getLatLng();
+	map.flyTo([lat, lng], 18);
 }
 </script>
 

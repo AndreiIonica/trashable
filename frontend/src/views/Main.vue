@@ -12,55 +12,41 @@
 </template>
 
 <script lang="ts" setup>
-import Overlay from '@/components/modules/map/Overlay.vue';
-import userIconSVG from '@/assets/raw/UserIcon';
-import { rawSVG as markerIconSvg } from '@/assets/raw/Marker';
-import markerColors from '@/assets/raw/MarkerColors';
-
-import { onMounted } from 'vue';
+// Import leaflet css,won't work without it
 import 'leaflet/dist/leaflet.css';
-import {
-	Map,
-	map as createMap,
-	tileLayer,
-	LatLngExpression,
-	Marker as IMarker,
-	marker as Marker,
-	DivIcon as IDivIcon,
-	divIcon as DivIcon,
-} from 'leaflet';
+
+// Library imports
+import { onMounted } from 'vue';
+import { map as createMap, tileLayer, marker as Marker } from 'leaflet';
 import { Trashcan } from '@trashable/hydrogen';
 
-let map: Map;
+// Interfaces
+import type { LatLngExpression, Marker as IMarker, Map as IMap } from 'leaflet';
+
+// Leaflet helpers
+import MarkerIcons from '@/assets/leaflet/MarkerIcons';
+import UserIcon from '@/assets/leaflet/UserIcon';
+import Overlay from '@/components/modules/map/Overlay.vue';
+
 // Coords Pitesti
 const STARTING_COORDS: LatLngExpression = [44.8478554, 24.8641281];
 
-const UserIcon = DivIcon({
-	className: 'user-icon-map',
-	html: userIconSVG,
-});
-
-const MarkerIcons: IDivIcon[] = [];
-markerColors.forEach(c => {
-	MarkerIcons.push(
-		DivIcon({
-			className: 'mark',
-			html: markerIconSvg.replace('#000000', c),
-		}),
-	);
-});
+let map: IMap;
 
 const UserMarker = Marker(STARTING_COORDS, {
 	icon: UserIcon,
 });
+
 const TrashcanMarkers: IMarker[] = [];
 
 let Trashcans: Trashcan.Trashcan[];
 
+// Fetch all trashcans asynchronously
+// Not using await because it will stop execution until fetch is done
 Trashcan.GetAll()
-	.then(t => {
+	.then((t) => {
 		Trashcans = t;
-		Trashcans.forEach(trashcan => {
+		Trashcans.forEach((trashcan) => {
 			// Make new Marker
 			const m = Marker([trashcan.latitude, trashcan.longitude], {
 				icon: MarkerIcons[trashcan.type_id],
@@ -70,7 +56,7 @@ Trashcan.GetAll()
 			m.addTo(map);
 		});
 	})
-	.catch(err => {
+	.catch((err) => {
 		console.error(err);
 		// FIXME: find another way to error, for now will just alert
 		// eslint-disable-next-line no-alert

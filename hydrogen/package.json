@@ -9,17 +9,10 @@
 		"dev:watch": "tsc --watch & nodemon build"
 	},
 	"dependencies": {
-		"isomorphic-unfetch": "^3.1.0"
+		"@types/node": "^16.10.3",
+		"express": "^4.17.1",
+		"isomorphic-unfetch": "^3.1.0",
+		"typescript": "^4.4.3"
 	},
-	"devDependencies": {
-		"@types/node": "^15.12.2",
-		"@typescript-eslint/eslint-plugin": "^4.26.1",
-		"@typescript-eslint/parser": "^4.26.1",
-		"eslint": "^7.28.0",
-		"eslint-config-airbnb-base": "^14.2.1",
-		"eslint-plugin-import": "^2.24.2",
-		"nodemon": "^2.0.7",
-		"prettier": "^2.3.1",
-		"typescript": "^4.3.2"
-	}
+	"devDependencies": {}
 }

@@ -12,6 +12,8 @@
 </template>
 
 <script lang="ts" setup>
+import Overlay from '@/components/modules/map/Overlay.vue';
+
 // Import leaflet css,won't work without it
 import 'leaflet/dist/leaflet.css';
 
@@ -26,12 +28,14 @@ import type { LatLngExpression, Marker as IMarker, Map as IMap } from 'leaflet';
 // Leaflet helpers
 import MarkerIcons from '@/assets/leaflet/MarkerIcons';
 import UserIcon from '@/assets/leaflet/UserIcon';
-import Overlay from '@/components/modules/map/Overlay.vue';
+import Line from '@/util/leaflet/Line';
 
 // Coords Pitesti
 const STARTING_COORDS: LatLngExpression = [44.8478554, 24.8641281];
 
 let map: IMap;
+
+let mainLine: Line;
 
 const UserMarker = Marker(STARTING_COORDS, {
 	icon: UserIcon,
@@ -83,10 +87,32 @@ onMounted(() => {
 		'https://api.mapbox.com/styles/v1/trashable/cku74yqsr47gh18p3lghm3n69/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJhc2hhYmxlIiwiYSI6ImNrcjdvM2V6bjNxbWQzMXFwc2lsYjRkY3UifQ.LPWo7d8sFng4vCAzoWHjNA ',
 	).addTo(map);
 	UserMarker.addTo(map);
+	mainLine = new Line(map, '#60ad5e');
 });
 
 function handleClosest(id: number | 'all') {
 	console.log(id);
+	if (id === 'all') {
+		const userCoords = UserMarker.getLatLng();
+		let markerCoords = UserMarker.getLatLng();
+
+		let minDistance = -1;
+
+		TrashcanMarkers.forEach((t) => {
+			const dist = map.distance(t.getLatLng(), userCoords);
+
+			if (minDistance === -1) {
+				minDistance = dist;
+				markerCoords = t.getLatLng();
+			} else if (dist < minDistance) {
+				minDistance = Math.min(minDistance, dist);
+				markerCoords = t.getLatLng();
+			}
+		});
+		mainLine.setCoords(userCoords, markerCoords);
+
+		map.flyToBounds(mainLine.getBounds());
+	}
 }
 
 function handleZoomIn() {

@@ -12,7 +12,7 @@
 		xml:space="preserve"
 		fill="#ffffff"
 		width="100%"
-		height="height%"
+		height="100%%"
 	>
 		<g>
 			<g>

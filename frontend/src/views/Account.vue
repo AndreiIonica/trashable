@@ -1,5 +1,6 @@
 <template>
 	<div id="main-container">
+		<img id="background" src="~@/assets/raw/gradient.svg" />
 		<div class="logo">
 			<TrashableLogo></TrashableLogo>
 		</div>
@@ -22,42 +23,44 @@ import ReturnButton from '@/components/ui/ReturnButton.vue';
 import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 import UserLogo from '@/components/icons/UserLogo.vue';
 </script>
-
 <style scoped>
 .button-login {
 	width: 60%;
+	max-width: 20rem;
 	height: 2rem;
-	margin: 2.5%;
 }
 #main-container {
-	background-image: url('~@/assets/raw/gradient.svg');
-
 	width: 100%;
 	height: 100%;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 #to-site {
 	height: 2.4rem;
 	width: 38%;
-	margin-top: 5%;
-	margin-bottom: 2.5%;
+	max-width: 12rem;
 }
 #title {
-	margin: 2.5%;
 	color: var(--text-color);
 	font-size: 2rem;
 	letter-spacing: 0.12em;
 }
 .logo {
 	width: 25%;
-	margin: 5%;
+	height: 20%;
+	max-height: 4rem;
 }
 #user-logo {
 	fill: #ffffff;
-	margin-top: 8%;
+}
+
+#background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
 }
 </style>

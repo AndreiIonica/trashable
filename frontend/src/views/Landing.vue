@@ -6,7 +6,7 @@
 		</div>
 		<p id="title">TRASHABLE</p>
 		<Button size="small" id="start" @click="goToMainScreen">START</Button>
-		<Button size="normal" id="to-site">Catre site</Button>
+		<Button size="normal" id="to-site" @click="goToHomeSite">Catre site</Button>
 	</div>
 </template>
 <script lang="ts" setup>
@@ -18,8 +18,11 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function goToMainScreen() {
-	// router.push('/main');
 	router.push('/main');
+}
+
+function goToHomeSite() {
+	window.location.href = 'https://trashable.giveitback.ro/';
 }
 </script>
 <style scoped>

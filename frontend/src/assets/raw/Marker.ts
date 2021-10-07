@@ -1,7 +1,16 @@
-export const innerSVG = `<g transform="translate(-107.55 -231.21)">
+export const innerSVG = `
+<circle cx="6.5" cy="6" r="3" fill="#ffffff"/>
+
+<g transform="translate(-107.55 -231.21)">
 <path d="m111 246.15c-3.2981-6.5732-3.6983-7.7764-3.2667-9.8212 1.3942-6.6056 10.71-6.9459 12.608-.46051.6532 2.2321.25156 3.5423-3.1516 10.281-1.6347 3.2371-3.0317 5.8858-3.1045 5.886-.0728.00022-1.4613-2.6483-3.0856-5.8856zm4.5528-7.1969c1.5936-1.5936-.16889-4.1859-2.2578-3.3206-1.4043.58168-1.6692 2.7207-.44326 3.5794.84036.58861 1.9611.48126 2.701-.25873z" stroke-width=".26458"/>
 </g>`;
 
-export const rawSVG = `<svg version="1.1" viewBox="0 0 13.013 20.851" xmlns="http://www.w3.org/2000/svg">
+export const rawSVG = `<svg
+fill="#000000"
+width="45px"
+height="45px"
+version="1.1"
+viewBox="0 0 13.013 20.851"
+xmlns="http://www.w3.org/2000/svg">
 ${innerSVG}
 </svg>`;

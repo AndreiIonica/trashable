@@ -1,7 +1,7 @@
 <template>
-	<div id="container">
+	<div class="container">
 		TRASHABLE
-		<MenuIcon id="icon" />
+		<MenuIcon class="icon" />
 	</div>
 </template>
 
@@ -10,8 +10,7 @@ import MenuIcon from '@/components/icons/HamburgerMenu.vue';
 </script>
 
 <style scoped>
-#container {
-	height: 3rem;
+.container {
 	font-size: 1.2rem;
 
 	display: flex;
@@ -28,7 +27,7 @@ import MenuIcon from '@/components/icons/HamburgerMenu.vue';
 	border: 0;
 }
 
-#icon {
+.icon {
 	height: 100%;
 }
 </style>

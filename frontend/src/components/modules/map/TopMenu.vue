@@ -1,9 +1,7 @@
 <template>
 	<div class="container">
 		TRASHABLE
-		<div class="icon">
-			<MenuIcon />
-		</div>
+		<MenuIcon class="icon" />
 	</div>
 </template>
 

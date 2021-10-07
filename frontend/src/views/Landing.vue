@@ -5,13 +5,22 @@
 			<TrashableLogo></TrashableLogo>
 		</div>
 		<p id="title">TRASHABLE</p>
-		<Button size="small" id="start">START</Button>
+		<Button size="small" id="start" @click="goToMainScreen">START</Button>
 		<Button size="normal" id="to-site">Catre site</Button>
 	</div>
 </template>
 <script lang="ts" setup>
 import Button from '@/components/ui/Button.vue';
 import TrashableLogo from '@/components/icons/TrashableLogo.vue';
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function goToMainScreen() {
+	// router.push('/main');
+	router.push('/main');
+}
 </script>
 <style scoped>
 #background {
@@ -27,29 +36,27 @@ import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 #to-site {
 	height: 2.4rem;
 	width: 38%;
-	margin-top: 5%;
-	margin-bottom: 2.5%;
+	max-width: 12rem;
 }
 #start {
+	max-width: 12rem;
 	width: 38%;
 	font-size: 2rem;
 	letter-spacing: 0.12rem;
 }
 #title {
-	margin: 2.5%;
 	color: var(--text-color);
 	font-size: 2rem;
 	letter-spacing: 0.12em;
-	margin-bottom: 45%;
 }
 .logo {
 	width: 25%;
-	margin: 5%;
+	max-height: 8rem;
 }
 </style>

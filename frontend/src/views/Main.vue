@@ -92,23 +92,30 @@ onMounted(() => {
 
 function handleClosest(id: number | 'all') {
 	console.log(id);
-	if (id === 'all') {
-		const userCoords = UserMarker.getLatLng();
-		let markerCoords = UserMarker.getLatLng();
 
-		let minDistance = -1;
+	let available = TrashcanMarkers.map(x => x);
+	if (id !== 'all') {
+		available = available.filter((t, i) => Trashcans[i].type_id === id);
+	}
 
-		TrashcanMarkers.forEach((t) => {
-			const dist = map.distance(t.getLatLng(), userCoords);
+	const userCoords = UserMarker.getLatLng();
+	let markerCoords = UserMarker.getLatLng();
 
-			if (minDistance === -1) {
-				minDistance = dist;
-				markerCoords = t.getLatLng();
-			} else if (dist < minDistance) {
-				minDistance = Math.min(minDistance, dist);
-				markerCoords = t.getLatLng();
-			}
-		});
+	let minDistance = -1;
+
+	available.forEach((t) => {
+		const dist = map.distance(t.getLatLng(), userCoords);
+
+		if (minDistance === -1) {
+			minDistance = dist;
+			markerCoords = t.getLatLng();
+		} else if (dist < minDistance) {
+			minDistance = Math.min(minDistance, dist);
+			markerCoords = t.getLatLng();
+		}
+	});
+
+	if (minDistance !== -1) {
 		mainLine.setCoords(userCoords, markerCoords);
 
 		map.flyToBounds(mainLine.getBounds());

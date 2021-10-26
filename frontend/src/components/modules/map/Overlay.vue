@@ -7,6 +7,7 @@
 				:pins="ClosestMenuProps.pins"
 				:recycling-center="ClosestMenuProps.recyclingCenter"
 				@back="toggleMenu"
+				@closest="id => emit('closest', id)"
 			/>
 		</div>
 		<div v-else class="controls-container clickable">

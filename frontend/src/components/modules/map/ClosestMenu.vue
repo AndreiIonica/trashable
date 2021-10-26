@@ -19,13 +19,13 @@
 			>
 				<RecyclingCenterIcon />
 			</ClosestMenuItem>
-			<ReturnButton />
+			<ReturnButton @click="emit('back')" />
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 import ClosestMenuItem from '@/components/modules/map/ClosestMenuItem.vue';
 import MarkerIcon from '@/components/icons/MarkerIcon.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
@@ -42,6 +42,12 @@ interface IMenuProps {
 }
 
 const props = defineProps<IMenuProps>();
+
+interface IMenuEmits {
+	(e: 'back'): void;
+}
+
+const emit = defineEmits<IMenuEmits>();
 </script>
 
 <style scoped>

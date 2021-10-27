@@ -52,8 +52,9 @@ Trashcan.GetAll()
 		Trashcans = t;
 		Trashcans.forEach(trashcan => {
 			// Make new Marker
+			// In the API id's start from 1
 			const m = Marker([trashcan.latitude, trashcan.longitude], {
-				icon: MarkerIcons[trashcan.type_id],
+				icon: MarkerIcons[trashcan.type_id - 1],
 			});
 
 			TrashcanMarkers.push(m);

@@ -27,6 +27,8 @@
 <script lang="ts" setup>
 import { defineEmits, ref } from 'vue';
 
+import markerColors from '@/assets/raw/MarkerColors';
+
 import TopMenu from './TopMenu.vue';
 import ClosestMenu from './ClosestMenu.vue';
 import Focus from './Focus.vue';
@@ -50,26 +52,9 @@ function toggleMenu() {
 	menuActive.value = !menuActive.value;
 }
 
-// TODO: compute these
+// TODO: compute distances
 const ClosestMenuProps = {
-	pins: [
-		{
-			markerColor: '#CB2B3E',
-			distance: '. . . m',
-		},
-		{
-			markerColor: '#2AAD27',
-			distance: '. . . m',
-		},
-		{
-			markerColor: '#2A81CB',
-			distance: '. . . m',
-		},
-		{
-			markerColor: '#FFD326',
-			distance: '. . . m',
-		},
-	],
+	pins: markerColors.map(c => ({ markerColor: c, distance: '. . . m' })),
 	recyclingCenter: {
 		markerColor: '#FFFFFF',
 		distance: '. . . m',

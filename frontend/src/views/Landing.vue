@@ -23,6 +23,10 @@ function goToMainScreen() {
 
 function goToHomeSite() {
 	window.location.href = 'https://trashable.giveitback.ro/';
+
+	// Possible macos fix
+	// eslint-disable-next-line no-restricted-globals
+	location.href = 'https://trashable.giveitback.ro/';
 }
 </script>
 <style scoped>

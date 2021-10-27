@@ -9,6 +9,7 @@
 				:distance="t.distance"
 				:markerColor="t.markerColor"
 				class="item-child"
+				@click="emit('closest', i + 1)"
 			>
 				<MarkerIcon />
 			</ClosestMenuItem>
@@ -16,16 +17,21 @@
 				:distance="props.recyclingCenter.distance"
 				:markerColor="props.recyclingCenter.markerColor"
 				class="item-child"
+				@click="emit('closest', pins.length + 1)"
 			>
+				<!--
+						Emmiting pins.length + 1 because recycling center is always the last one in the list
+						and the array is 1-indexed
+				-->
 				<RecyclingCenterIcon />
 			</ClosestMenuItem>
-			<ReturnButton />
+			<ReturnButton @click="emit('back')" />
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 import ClosestMenuItem from '@/components/modules/map/ClosestMenuItem.vue';
 import MarkerIcon from '@/components/icons/MarkerIcon.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
@@ -42,6 +48,13 @@ interface IMenuProps {
 }
 
 const props = defineProps<IMenuProps>();
+
+interface IMenuEmits {
+	(e: 'back'): void;
+	(e: 'closest', id: number): void;
+}
+
+const emit = defineEmits<IMenuEmits>();
 </script>
 
 <style scoped>

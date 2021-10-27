@@ -7,7 +7,7 @@ import { rawSVG as markerIconSVG } from '@/assets/raw/Marker';
 import { rawSVG as recyclingCenterIconSVG } from '../raw/RecyclingCenterIcon';
 
 const MarkerIcons: IDivIcon[] = [];
-markerColors.forEach((c) => {
+markerColors.forEach(c => {
 	MarkerIcons.push(
 		DivIcon({
 			className: 'marker-normal',

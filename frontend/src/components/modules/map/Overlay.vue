@@ -2,10 +2,18 @@
 	<div class="overlay-container">
 		<TopMenu id="top-menu" class="clickable" />
 
-		<div class="controls-container clickable">
+		<div v-if="menuActive" class="clickable">
+			<ClosestMenu
+				:pins="ClosestMenuProps.pins"
+				:recycling-center="ClosestMenuProps.recyclingCenter"
+				@back="toggleMenu"
+				@closest="id => emit('closest', id)"
+			/>
+		</div>
+		<div v-else class="controls-container clickable">
 			<div id="menus-container">
 				<RecyclingCenter id="closest-button" class="clickable" @click="emit('closest', 'all')" />
-				<Button id="closest-menu" class="">IN APROPIERE</Button>
+				<Button id="closest-menu" @click="toggleMenu">IN APROPIERE</Button>
 			</div>
 			<div>
 				<Focus class="control-map clickable" @click="emit('focusMap')" />
@@ -17,9 +25,12 @@
 </template>
 
 <script lang="ts" setup>
-import { defineEmits } from 'vue';
+import { defineEmits, ref } from 'vue';
+
+import markerColors from '@/assets/raw/MarkerColors';
 
 import TopMenu from './TopMenu.vue';
+import ClosestMenu from './ClosestMenu.vue';
 import Focus from './Focus.vue';
 import ZoomIn from './ZoomIn.vue';
 import ZoomOut from './ZoomOut.vue';
@@ -34,6 +45,21 @@ interface IOverlayEmits {
 }
 
 const emit = defineEmits<IOverlayEmits>();
+
+const menuActive = ref(false);
+
+function toggleMenu() {
+	menuActive.value = !menuActive.value;
+}
+
+// TODO: compute distances
+const ClosestMenuProps = {
+	pins: markerColors.map(c => ({ markerColor: c, distance: '. . . m' })),
+	recyclingCenter: {
+		markerColor: '#FFFFFF',
+		distance: '. . . m',
+	},
+};
 </script>
 
 <style scoped>

@@ -16,10 +16,14 @@ import Overlay from '@/components/modules/map/Overlay.vue';
 
 // Import leaflet css,won't work without it
 import 'leaflet/dist/leaflet.css';
-
-// Library imports
-import { onMounted } from 'vue';
 import { map as createMap, tileLayer, marker as Marker } from 'leaflet';
+
+// Vue related imports
+import { onMounted } from 'vue';
+import { useStore } from 'vuex';
+import { key } from '@/store';
+
+// API lib
 import { Trashcan } from '@trashable/hydrogen';
 
 // Interfaces
@@ -29,6 +33,8 @@ import type { LatLngExpression, Marker as IMarker, Map as IMap } from 'leaflet';
 import MarkerIcons from '@/assets/leaflet/MarkerIcons';
 import UserIcon from '@/assets/leaflet/UserIcon';
 import Line from '@/util/leaflet/Line';
+
+const store = useStore(key);
 
 // Coords Pitesti
 const STARTING_COORDS: LatLngExpression = [44.8478554, 24.8641281];
@@ -43,14 +49,15 @@ const UserMarker = Marker(STARTING_COORDS, {
 
 const TrashcanMarkers: IMarker[] = [];
 
-let Trashcans: Trashcan.Trashcan[];
+// let Trashcans: Trashcan.Trashcan[];
 
 // Fetch all trashcans asynchronously
 // Not using await because it will stop execution until fetch is done
 Trashcan.GetAll()
 	.then(t => {
-		Trashcans = t;
-		Trashcans.forEach(trashcan => {
+		// Trashcans = t;
+		store.state.trashcans = t;
+		store.state.trashcans.forEach(trashcan => {
 			// Make new Marker
 			// In the API id's start from 1
 			const m = Marker([trashcan.latitude, trashcan.longitude], {
@@ -97,7 +104,7 @@ function handleClosest(id: number | 'all') {
 
 	let available = TrashcanMarkers.map(x => x);
 	if (id !== 'all') {
-		available = available.filter((t, i) => Trashcans[i].type_id === id);
+		available = available.filter((t, i) => store.state.trashcans[i].type_id === id);
 	}
 
 	const userCoords = UserMarker.getLatLng();

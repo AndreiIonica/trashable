@@ -1,6 +1,6 @@
 <template>
 	<div class="overlay-container">
-		<TopMenu id="top-menu" class="clickable" />
+		<TopMenu id="top-menu" class="clickable" @click="redirectMenu" />
 
 		<div v-if="menuActive" class="clickable">
 			<ClosestMenu
@@ -26,6 +26,7 @@
 
 <script lang="ts" setup>
 import { defineEmits, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 import markerColors from '@/assets/raw/MarkerColors';
 
@@ -46,10 +47,16 @@ interface IOverlayEmits {
 
 const emit = defineEmits<IOverlayEmits>();
 
+const router = useRouter();
+
 const menuActive = ref(false);
 
 function toggleMenu() {
 	menuActive.value = !menuActive.value;
+}
+
+function redirectMenu() {
+	router.push('/account');
 }
 
 // TODO: compute distances

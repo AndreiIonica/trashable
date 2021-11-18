@@ -8,8 +8,8 @@
 		<div id="user-logo" class="logo">
 			<UserLogo></UserLogo>
 		</div>
-		<GoogleSignIn class="button-login"></GoogleSignIn>
-		<DiscordSignIn class="button-login"></DiscordSignIn>
+		<GoogleSignIn :redirect="Auth.GoogleSignInURL" class="button-login"></GoogleSignIn>
+		<DiscordSignIn :redirect="Auth.DiscordSignInURL" class="button-login"></DiscordSignIn>
 		<Button size="normal" id="to-site">Catre site</Button>
 		<ReturnButton></ReturnButton>
 	</div>
@@ -22,6 +22,8 @@ import Button from '@/components/ui/Button.vue';
 import ReturnButton from '@/components/ui/ReturnButton.vue';
 import TrashableLogo from '@/components/icons/TrashableLogo.vue';
 import UserLogo from '@/components/icons/UserLogo.vue';
+
+import { Auth } from '@trashable/hydrogen';
 </script>
 <style scoped>
 .button-login {

@@ -1,15 +1,23 @@
 <template>
-	<button id="container">
+	<a :href="props.redirect" id="container">
 		<div id="icon">
 			<GoogleLogo />
 		</div>
 		Sign in with Google
-	</button>
+	</a>
 </template>
 
 <script lang="ts" setup>
+import { defineProps } from 'vue';
+
 // Somehow applying styles directly to this component doesn't work,so it's wrapped in a div
 import GoogleLogo from '@/components/icons/GoogleLogo.vue';
+
+interface IGoogleProps {
+	redirect?: string;
+}
+
+const props = defineProps<IGoogleProps>();
 </script>
 
 <style scoped>
@@ -23,6 +31,7 @@ import GoogleLogo from '@/components/icons/GoogleLogo.vue';
 
 	background: #ffffff;
 	color: var(--secondary-text);
+	text-decoration: none;
 
 	border-radius: 4rem;
 	border: 0;

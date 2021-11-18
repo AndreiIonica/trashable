@@ -15,7 +15,7 @@ const authCallback = async (req, res) => {
 
 	const token = await AuthService.sign(payload);
 	res.cookie('auth-token', token);
-	res.end();
+	res.redirect('https://trashable.vercel.app/');
 };
 
 router.get(
